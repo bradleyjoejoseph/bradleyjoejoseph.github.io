@@ -3,6 +3,8 @@ body{
     color: white;
 }
 .staffBox{
+    border-style:dotted;
+    border-color:red;
     padding:10px;
     margin:10px;
 }
