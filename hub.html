@@ -13,8 +13,30 @@
         <title>Infinity Hub</title>
     </head>
     <style>
+        /* width */
+        ::-webkit-scrollbar {
+          width: 10px;
+        }
+
+        /* Track */
+        ::-webkit-scrollbar-track {
+          background: #2f2d40;
+        }
+
+        /* Handle */
+        ::-webkit-scrollbar-thumb {
+          background: #FFF;
+        }
+
+        /* Handle on hover */
+        ::-webkit-scrollbar-thumb:hover {
+          background: #AAA;
+        }
+        #tile-box{
+            height:60%;
+        }
         .tile{
-            border-radius:25px;
+            border-radius:10px;
         }
         body{
             background-color: black;
@@ -24,9 +46,9 @@
             width:30px;
         }
         #container{
-            background-image:linear-gradient(rgba(26,26,31,0), rgba(26,26,31,1)), url(ISLogo.png);
+            background-image:linear-gradient(rgba(26,26,31,0), rgba(26,26,31,1)), url(/img/container.png);
             background-size:100vh;
-            min-height:100vh;
+            height:90vh;
             background-position: center;
             background-repeat: no-repeat;
             background-size: cover;
@@ -40,8 +62,6 @@
                 font-size:25px;
             }
             #tile-box{
-                position:absolute;
-                bottom:0;
                 width:100%;
                 background-color:#111;
             }
@@ -59,8 +79,6 @@
                 font-size:25px;
             }
             #tile-box{
-                position:absolute;
-                bottom:0;
                 width:100%;
                 background-color:#111;
             }
@@ -78,8 +96,6 @@
                 font-size:50px;
             }
             #tile-box{
-                position:absolute;
-                bottom:0;
                 width:100%;
                 background-color:#111;
             }
@@ -97,8 +113,6 @@
                 font-size:50px;
             }
             #tile-box{
-                position:absolute;
-                bottom:0;
                 width:100%;
                 background-color:#111;
             }
@@ -116,8 +130,6 @@
                 font-size:50px;
             }
             #tile-box{
-                position:absolute;
-                bottom:0;
                 width:100%;
                 background-color:#111;
             }
@@ -134,13 +146,18 @@
     </style>
     <body>
         <div id="container">
-            <div id="title">Welcome to The Infinity Hub</div>
-            <center id="tile-box">
-                <div class="tile"><a target="_blank" href="https://www.youtube.com"><img src="ytlogo.png"></a></div>
-                <div class="tile"><a target="_blank" href="https://play.google.com/store"><img src="gplogo.png"></a></div>
-                <div class="tile"><a target="_blank" href="https://www.apple.com/app-store/"><img src="aplogo.png"></a></div>
-                <div class="tile"><a target="_blank" href="https://www.apple.com/app-store/"><img src="aplogo.png"></a></div>
-            </center>
+            <div id="title">Welcome to The Infinity Hub!</div>
         </div>
+        <center id="tile-box">
+            <div class="tile"><a target="_blank" href="https://gmail.com/"><img src="/img/gmlogo.png"></a></div>
+            <div class="tile"><a target="_blank" href="https://outlook.com/"><img src="/img/ollogo.png"></a></div>
+            <div class="tile"><a target="_blank" href="https://www.youtube.com"><img src="/img/ytlogo.png"></a></div>
+            <div class="tile"><a target="_blank" href="https://play.google.com/store"><img src="/img/gplogo.png"></a></div>
+            <div class="tile"><a target="_blank" href="https://www.apple.com/app-store/"><img src="/img/aplogo.png"></a></div>
+            <div class="tile"><a target="_blank" href="https://github.com/"><img src="/img/ghlogo.png"></a></div>
+            <div class="tile"><a target="_blank" href="https://stackoverflow.com/"><img src="/img/sologo.png"></a></div>
+            <div class="tile"><a target="_blank" href="https://stackexchange.com/"><img src="/img/selogo.png"></a></div>
+            <!--          <div class="tile"><a target="_blank" href=""><img src="/img/logo.png"></a></div>            -->
+        </center>
     </body>
 </html>
