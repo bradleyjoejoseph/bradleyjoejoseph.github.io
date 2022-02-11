@@ -4,9 +4,61 @@
         <link rel="preconnect" href="https://fonts.googleapis.com">
         <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
         <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@100&display=swap" rel="stylesheet">
+
         <link rel="icon" href="infinity-symbol.png">
         <title>Bradley Joseph</title>
         <style>
+            .glow-on-hover {
+                cursor: pointer;
+                position: relative;
+                z-index: 0;
+                border-radius: 10px;
+            }
+
+            .glow-on-hover:before {
+                content: '';
+                background: linear-gradient(45deg, #ff0000, #ff7300, #fffb00, #48ff00, #00ffd5, #002bff, #7a00ff, #ff00c8, #ff0000);
+                position: absolute;
+                top: -2px;
+                left:-2px;
+                background-size: 400%;
+                z-index: -1;
+                filter: blur(5px);
+                width: calc(100% + 4px);
+                height: calc(100% + 4px);
+                animation: glowing 20s linear infinite;
+                opacity: 0;
+                transition: opacity .3s ease-in-out;
+                border-radius: 10px;
+            }
+
+            .glow-on-hover:active {
+                color: #000
+            }
+
+
+
+            .glow-on-hover:hover:before {
+                opacity: 1;
+            }
+
+            .glow-on-hover:after {
+                z-index: -1;
+                content: '';
+                position: absolute;
+                width: 100%;
+                height: 100%;
+                background: #111;
+                left: 0;
+                top: 0;
+                border-radius: 10px;
+            }
+
+            @keyframes glowing {
+                0% { background-position: 0 0; }
+                50% { background-position: 400% 0; }
+                100% { background-position: 0 0; }
+            }
             #content{
                 background-color: black;
                 color:white;
@@ -115,7 +167,7 @@
         <div id="imgBlock">
             <img id="banner" src="ISLogo.png">
         </div>
-        <div id="bio">Hey I'm Bradley Joseph, I am currently learning
+        <section id="bio">Hey I'm Bradley Joseph, I am currently learning
         <a href="https://www.freecodecamp.org/learn/front-end-development-libraries/">
         Front End Development Libraries</a> on FreeCodeCamp. I was born in Belfast and now live in
         Southampton. I want to become a self taught game developer along with other side projects.
@@ -128,10 +180,11 @@
         JavaScript Algorithms and Data Structures</a> on FreeCodeCamp, and released my
         <a href="https://play.google.com/store/apps/details?id=com.InfinityStudios.EnigmaSTS">
         first game made in unity</a>. Scroll down to find out more of the projects I have done
-        including 3D models and certification for courses.</div>
+        including 3D models and certification for courses.
+        </section>
 
 
-        <div id="socials">
+        <section id="socials">
             <a target="_blank" href="https://github.com/bradleyjoe007"><img class="socials" src="ghlogo.png"></a>
             <a target="_blank" href="https://stackoverflow.com/users/14214193/ipsm"><img class="socials" src="sologo.png"></a>
             <a target="_blank" href="https://www.youtube.com/channel/UCn49tbS3vLvhok6Y9DrPLCQ"><img class="socials" src="ytlogo.png"></a>
@@ -140,39 +193,39 @@
             <a target="_blank" href="https://play.google.com/store/apps/dev?id=5348825362237735260"><img class="socials" src="gplogo.png"></a>
             <a target="_blank" href="https://ipsm.itch.io"><img class="socials" src="itlogo.png" style="filter: invert(1);"></a>
 
-        </div>
+        </section>
 
 
-        <div id="projectBox">
-            <a target="_blank" href="https://www.freecodecamp.org/certification/infinity_ninja1239/javascript-algorithms-and-data-structures" class="project-tile">
+        <section id="projectBox">
+            <a target="_blank" href="https://www.freecodecamp.org/certification/infinity_ninja1239/javascript-algorithms-and-data-structures" class="glow-on-hover project-tile">
                 <img class="project-img" src="JADS.png">
                 <div class="project-info"><p>JavaScript Algorithms and Data Structures</p></div>
             </a>
-            <a target="_blank" href="CS50x.pdf" class="project-tile">
+            <a target="_blank" href="CS50x.pdf" class="glow-on-hover project-tile">
                 <img class="project-img" src="cs50.png">
                 <div class="project-info"><p>CS50x Certification</p></div>
             </a>
-            <a target="_blank" href="https://play.google.com/store/apps/details?id=com.InfinityStudios.EnigmaSTS" class="project-tile">
+            <a target="_blank" href="https://play.google.com/store/apps/details?id=com.InfinityStudios.EnigmaSTS" class="glow-on-hover project-tile">
                 <img class="project-img" src="enigma.png">
                 <div class="project-info"><p>Enigma: STS</p></div>
             </a>
-            <a target="_blank" href="https://ipsm.itch.io/enigma-rtc" class="project-tile">
+            <a target="_blank" href="https://ipsm.itch.io/enigma-rtc" class="glow-on-hover project-tile">
                 <img class="project-img" src="https://img.itch.zone/aW1nLzU1OTc3NDcucG5n/315x250%23c/2%2BGgzp.png">
                 <div class="project-info"><p>Enigma: RTC</p></div>
             </a>
-            <a href="https://sketchfab.com/3d-models/infinity-slope-1-cc13f2f9c9884de6b81559380b6d1e8d?utm_medium=embed&utm_campaign=share-popup&utm_content=cc13f2f9c9884de6b81559380b6d1e8d" target="_blank" class="project-tile">
+            <a href="https://sketchfab.com/3d-models/infinity-slope-1-cc13f2f9c9884de6b81559380b6d1e8d?utm_medium=embed&utm_campaign=share-popup&utm_content=cc13f2f9c9884de6b81559380b6d1e8d" target="_blank" class="glow-on-hover project-tile">
                     <iframe class="project-img" src="https://sketchfab.com/models/cc13f2f9c9884de6b81559380b6d1e8d/embed"></iframe>
                     <div class="project-info">
                          <p>Infinity Slope 1</p>
                     </div>
             </a>
-            <a href="https://www.freecodecamp.org/certification/infinity_ninja1239/responsive-web-design" target="_blank" class="project-tile">
+            <a href="https://www.freecodecamp.org/certification/infinity_ninja1239/responsive-web-design" target="_blank" class="glow-on-hover project-tile">
                     <img class="project-img" src="RWD.png">
                     <div class="project-info">
                          <p>Responsive Web Design</p>
                     </div>
             </a>
-        </div>
+        </section>
 
         <div id="footer">
             <p id="ooter">
@@ -183,6 +236,44 @@
 
     </body>
     <script>
-        // alert("Hello World!");
+        let section = document.querySelectorAll("section");
+        let menu = document.querySelectorAll("header nav a");
+
+        window.onscroll = () => {
+          section.forEach((i) => {
+            let top = window.scrollY;
+            let offset = i.offsetTop - 150;
+            let height = i.offsetHeight;
+            let id = i.getAttribute("id");
+
+            if (top >= offset && top < offset + height) {
+              menu.forEach((link) => {
+                link.classList.remove("active");
+                document
+                  .querySelector("header nav a[href*=" + id + "]")
+                  .classList.add("active");
+              });
+            }
+          });
+        };
+
+        function reveal() {
+          var reveals = document.querySelectorAll(".reveal");
+
+          for (var i = 0; i < reveals.length; i++) {
+            var windowHeight = window.innerHeight;
+            var elementTop = reveals[i].getBoundingClientRect().top;
+            var elementVisible = 150;
+
+            if (elementTop < windowHeight - elementVisible) {
+              reveals[i].classList.add("active");
+            } else {
+              reveals[i].classList.remove("active");
+            }
+          }
+        }
+
+        window.addEventListener("scroll", reveal);
+
     </script>
 </html>
