@@ -1,282 +1,299 @@
 <!DOCTYPE html>
 <html>
-    <head>
-        <link rel="preconnect" href="https://fonts.googleapis.com">
-        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-        <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@100&display=swap" rel="stylesheet">
 
-        <link rel="icon" href="infinity-symbol.png">
-        <title>Bradley Joseph</title>
-        <style>
-            ::-webkit-scrollbar {
-                display: none;
-            }
-            .glow-on-hover {
-                cursor: pointer;
-                position: relative;
-                z-index: 0;
-                border-radius: 10px;
-            }
+<head>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@100&display=swap" rel="stylesheet">
 
-            .glow-on-hover:before {
-                content: '';
-                background: linear-gradient(45deg, #ff0000, #ff7300, #fffb00, #48ff00, #00ffd5, #002bff, #7a00ff, #ff00c8, #ff0000);
-                position: absolute;
-                top: -2px;
-                left:-2px;
-                background-size: 400%;
-                z-index: -1;
-                filter: blur(5px);
-                width: calc(100% + 4px);
-                height: calc(100% + 4px);
-                animation: glowing 20s linear infinite;
-                opacity: 0;
-                transition: opacity .3s ease-in-out;
-                border-radius: 10px;
-            }
+  <link rel="icon" href="infinity-symbol.png">
+  <title>Bradley Joseph</title>
+  <style>
+    ::-webkit-scrollbar {
+      display: none;
+    }
 
-            .glow-on-hover:active {
-                color: #000
-            }
+    .glow-on-hover {
+      cursor: pointer;
+      position: relative;
+      z-index: 0;
+      border-radius: 10px;
+    }
 
+    .glow-on-hover:before {
+      content: '';
+      background: linear-gradient(45deg, #ff0000, #ff7300, #fffb00, #48ff00, #00ffd5, #002bff, #7a00ff, #ff00c8, #ff0000);
+      position: absolute;
+      top: -2px;
+      left: -2px;
+      background-size: 400%;
+      z-index: -1;
+      filter: blur(5px);
+      width: calc(100% + 4px);
+      height: calc(100% + 4px);
+      animation: glowing 20s linear infinite;
+      opacity: 0;
+      transition: opacity .3s ease-in-out;
+      border-radius: 10px;
+    }
 
+    .glow-on-hover:active {
+      color: #000
+    }
 
-            .glow-on-hover:hover:before {
-                opacity: 1;
-            }
+    .glow-on-hover:hover:before {
+      opacity: 1;
+    }
 
-            .glow-on-hover:after {
-                z-index: -1;
-                content: '';
-                position: absolute;
-                width: 100%;
-                height: 100%;
-                background: #111;
-                left: 0;
-                top: 0;
-                border-radius: 10px;
-            }
+    .glow-on-hover:after {
+      z-index: -1;
+      content: '';
+      position: absolute;
+      width: 100%;
+      height: 100%;
+      background: #111;
+      left: 0;
+      top: 0;
+      border-radius: 10px;
+    }
 
-            @keyframes glowing {
-                0% { background-position: 0 0; }
-                50% { background-position: 400% 0; }
-                100% { background-position: 0 0; }
-            }
-            #content{
-                background-color: black;
-                color:white;
-                font-family: 'Roboto', sans-serif;
-                padding-bottom:100px;
+    @keyframes glowing {
+      0% {
+        background-position: 0 0;
+      }
 
-            }
-            #nav{
-                background-color: #0c0c0c;
-                position: relative;
-                display:flex;
-                align-items:center;
+      50% {
+        background-position: 400% 0;
+      }
 
+      100% {
+        background-position: 0 0;
+      }
+    }
 
-            }
-            #imgBlock{
-                position:relative;
-                background-color: #0c0c0c;
-                text-align: center;
-                width:100%
-            }
+    #content {
+      background-color: black;
+      color: white;
+      font-family: 'Roboto', sans-serif;
+      padding-bottom: 100px;
+    }
 
-            #logo{
-                filter: invert(1);
-                width:100px;
-                margin-left: auto;
-                margin-right: auto;
-            }
-            #banner{
-                width:100%;
-            }
-            #bio{
-                font-size:2vh;
-                padding:100px;
-                background-color: #0c0c0c;
-            }
-            #ooter{
-                position:absolute;
-                margin:100px;
-                right:20%;
-            }
-            #footer{
-                font-size:3vh;
-                width:100%;
-                background-color: #0c0c0c;
-            }
-            a{
-                color:#EEE;
-            }
-            #projectBox{
-                background-color: #0c0c0c;
-                display:flex;
-                flex-wrap: wrap;
-                width:100%;
+    #nav {
+      background-color: #0c0c0c;
+      position: relative;
+      display: flex;
+      align-items: center;
+    }
 
-                padding-bottom:100px;
-            }
-            .project-tile{
-                background-color: #1c1c1c;
-                display:flex;
-                flex-flow:column;
-                text-align:center;
-                align-items:center;
-                width:30%;
-                margin-left:1.5%;
-                margin-top:5%;
-                margin-right:1.5%;
-                border-radius:25px;
-            }
-            .project-img{
-                height:15vw;
-            }
-            .project-info{
-                background-color: #171717;
-                border-bottom-left-radius:25px;
-                border-bottom-right-radius:25px;
-                font-size:2vmax;
-                width:100%;
-                flex:1 1 auto;
-                align-items:center;
+    #imgBlock {
+      position: relative;
+      background-color: #0c0c0c;
+      text-align: center;
+      width: 100%
+    }
 
-            }
-            #socials{
-                height:50vh;
-                display:flex;
-                flex-wrap:wrap;
-                align-items:center;
-                justify-content:center;
+    #logo {
+      filter: invert(1);
+      width: 100px;
+      margin-left: auto;
+      margin-right: auto;
+    }
 
-            }
-            .socials{
-                display:flex;
-                flex: 1 1 auto;
-                flex-flow:column;
-                width:5vw;
-                min-width:125px;
-                margin:25px;
-            }
-        </style>
-    </head>
+    #banner {
+      width: 100%;
+    }
 
-    <body id="content">
-        <div id="nav">
-            <img id="logo" src="infinity-symbol.png" alt="∞">
-        </div>
-        <div id="imgBlock">
-            <img id="banner" src="ISLogo.png">
-        </div>
-        <section id="bio">Hey I'm Bradley Joseph, I am currently learning
-        <a href="https://www.freecodecamp.org/learn/front-end-development-libraries/">
-        Front End Development Libraries</a> on FreeCodeCamp. I was born in Belfast and now live in
-        Southampton. I want to become a self taught game developer along with other side projects.
-        I'm intrested in gaming, 3D Modelling, interior design, modern technology, AI and Rubix cubes.
-        My personal best at the rubix cube is 36.352 seconds. My goals are to solve the rubix cube in
-        around 10 seconds, create a fully fledged game that hits 1 million downloads on the google
-        play store, and improve my 3D artwork. On my steps to success I have completed CS50x, a
-        harvard university opencourse. I have completed
-        <a href="https://www.freecodecamp.org/certification/infinity_ninja1239/javascript-algorithms-and-data-structures">
-        JavaScript Algorithms and Data Structures</a> on FreeCodeCamp, and released my
-        <a href="https://play.google.com/store/apps/details?id=com.InfinityStudios.EnigmaSTS">
-        first game made in unity</a>. Scroll down to find out more of the projects I have done
-        including 3D models and certification for courses.
-        </section>
+    #bio {
+      font-size: 2vh;
+      padding: 100px;
+      background-color: #0c0c0c;
+    }
 
+    #ooter {
+      position: absolute;
+      margin: 100px;
+      right: 20%;
+    }
 
-        <section id="socials">
-            <a target="_blank" href="https://github.com/bradleyjoe007"><img class="socials" src="ghlogo.png"></a>
-            <a target="_blank" href="https://stackoverflow.com/users/14214193/ipsm"><img class="socials" src="sologo.png"></a>
-            <a target="_blank" href="https://www.youtube.com/channel/UCn49tbS3vLvhok6Y9DrPLCQ"><img class="socials" src="ytlogo.png"></a>
-            <a target="_blank" href="https://twitter.com/IPSM_InPaSaMu"><img class="socials" src="twlogo.png"></a>
-            <a target="_blank" href="https://www.twitch.tv/inpasamu"><img class="socials" src="tchlogo.png"></a>
-            <a target="_blank" href="https://play.google.com/store/apps/dev?id=5348825362237735260"><img class="socials" src="gplogo.png"></a>
-            <a target="_blank" href="https://ipsm.itch.io"><img class="socials" src="itlogo.png" style="filter: invert(1);"></a>
+    #footer {
+      font-size: 3vh;
+      width: 100%;
+      background-color: #0c0c0c;
+    }
 
-        </section>
+    a {
+      color: #EEE;
+    }
 
+    #projectBox {
+      background-color: #0c0c0c;
+      display: flex;
+      flex-wrap: wrap;
+      width: 100%;
+      padding-bottom: 100px;
+    }
 
-        <section id="projectBox">
-            <a target="_blank" href="https://www.freecodecamp.org/certification/infinity_ninja1239/javascript-algorithms-and-data-structures" class="glow-on-hover project-tile">
-                <img class="project-img" src="JADS.png">
-                <div class="project-info"><p>JavaScript Algorithms and Data Structures</p></div>
-            </a>
-            <a target="_blank" href="CS50x.pdf" class="glow-on-hover project-tile">
-                <img class="project-img" src="cs50.png">
-                <div class="project-info"><p>CS50x Certification</p></div>
-            </a>
-            <a target="_blank" href="https://play.google.com/store/apps/details?id=com.InfinityStudios.EnigmaSTS" class="glow-on-hover project-tile">
-                <img class="project-img" src="enigma.png">
-                <div class="project-info"><p>Enigma: STS</p></div>
-            </a>
-            <a target="_blank" href="https://ipsm.itch.io/enigma-rtc" class="glow-on-hover project-tile">
-                <img class="project-img" src="https://img.itch.zone/aW1nLzU1OTc3NDcucG5n/315x250%23c/2%2BGgzp.png">
-                <div class="project-info"><p>Enigma: RTC</p></div>
-            </a>
-            <a href="https://sketchfab.com/3d-models/infinity-slope-1-cc13f2f9c9884de6b81559380b6d1e8d?utm_medium=embed&utm_campaign=share-popup&utm_content=cc13f2f9c9884de6b81559380b6d1e8d" target="_blank" class="glow-on-hover project-tile">
-                    <iframe class="project-img" src="https://sketchfab.com/models/cc13f2f9c9884de6b81559380b6d1e8d/embed"></iframe>
-                    <div class="project-info">
-                         <p>Infinity Slope 1</p>
-                    </div>
-            </a>
-            <a href="https://www.freecodecamp.org/certification/infinity_ninja1239/responsive-web-design" target="_blank" class="glow-on-hover project-tile">
-                    <img class="project-img" src="RWD.png">
-                    <div class="project-info">
-                         <p>Responsive Web Design</p>
-                    </div>
-            </a>
-        </section>
+    .project-tile {
+      background-color: #1c1c1c;
+      display: flex;
+      flex-flow: column;
+      text-align: center;
+      align-items: center;
+      width: 30%;
+      margin-left: 1.5%;
+      margin-top: 5%;
+      margin-right: 1.5%;
+      border-radius: 25px;
+    }
 
-        <div id="footer">
-            <p id="ooter">
-                Email: bradleyjoe007@gmail.com<br>
-                Phone: +447587956344
-            </p>
-        </div>
+    .project-img {
+      height: 15vw;
+    }
 
-    </body>
-    <script>
-        let section = document.querySelectorAll("section");
-        let menu = document.querySelectorAll("header nav a");
+    .project-info {
+      background-color: #171717;
+      border-bottom-left-radius: 25px;
+      border-bottom-right-radius: 25px;
+      font-size: 2vmax;
+      width: 100%;
+      flex: 1 1 auto;
+      align-items: center;
+    }
 
-        window.onscroll = () => {
-          section.forEach((i) => {
-            let top = window.scrollY;
-            let offset = i.offsetTop - 150;
-            let height = i.offsetHeight;
-            let id = i.getAttribute("id");
+    #socials {
+      height: 50vh;
+      display: flex;
+      flex-wrap: wrap;
+      align-items: center;
+      justify-content: center;
+    }
 
-            if (top >= offset && top < offset + height) {
-              menu.forEach((link) => {
-                link.classList.remove("active");
-                document
-                  .querySelector("header nav a[href*=" + id + "]")
-                  .classList.add("active");
-              });
-            }
-          });
-        };
+    .socials {
+      display: flex;
+      flex: 1 1 auto;
+      flex-flow: column;
+      width: 5vw;
+      min-width: 125px;
+      margin: 25px;
+    }
+  </style>
+</head>
 
-        function reveal() {
-          var reveals = document.querySelectorAll(".reveal");
+<body id="content">
+  <div id="nav">
+    <img id="logo" src="infinity-symbol.png" alt="∞">
+  </div>
+  <div id="imgBlock">
+    <img id="banner" src="ISLogo.png">
+  </div>
+  <section id="bio">Hey I'm Bradley Joseph, I am currently learning
+    <a href="https://www.freecodecamp.org/learn/front-end-development-libraries/">
+      Front End Development Libraries</a> on FreeCodeCamp. I was born in Belfast and now live in
+    Southampton. I want to become a self taught game developer along with other side projects.
+    I'm intrested in gaming, 3D Modelling, interior design, modern technology, AI and Rubix cubes.
+    My personal best at the rubix cube is 36.352 seconds. My goals are to solve the rubix cube in
+    around 10 seconds, create a fully fledged game that hits 1 million downloads on the google
+    play store, and improve my 3D artwork. On my steps to success I have completed CS50x, a
+    harvard university opencourse. I have completed
+    <a href="https://www.freecodecamp.org/certification/infinity_ninja1239/javascript-algorithms-and-data-structures">
+      JavaScript Algorithms and Data Structures</a> on FreeCodeCamp, and released my
+    <a href="https://play.google.com/store/apps/details?id=com.InfinityStudios.EnigmaSTS">
+      first game made in unity</a>. Scroll down to find out more of the projects I have done
+    including 3D models and certification for courses.
+  </section>
 
-          for (var i = 0; i < reveals.length; i++) {
-            var windowHeight = window.innerHeight;
-            var elementTop = reveals[i].getBoundingClientRect().top;
-            var elementVisible = 150;
+  <section id="socials">
+    <a target="_blank" href="https://github.com/bradleyjoe007"><img class="socials" src="ghlogo.png"></a>
+    <a target="_blank" href="https://stackoverflow.com/users/14214193/ipsm"><img class="socials" src="sologo.png"></a>
+    <a target="_blank" href="https://www.youtube.com/channel/UCn49tbS3vLvhok6Y9DrPLCQ"><img class="socials" src="ytlogo.png"></a>
+    <a target="_blank" href="https://twitter.com/IPSM_InPaSaMu"><img class="socials" src="twlogo.png"></a>
+    <a target="_blank" href="https://www.twitch.tv/inpasamu"><img class="socials" src="tchlogo.png"></a>
+    <a target="_blank" href="https://play.google.com/store/apps/dev?id=5348825362237735260"><img class="socials" src="gplogo.png"></a>
+    <a target="_blank" href="https://ipsm.itch.io"><img class="socials" src="itlogo.png" style="filter: invert(1);"></a>
 
-            if (elementTop < windowHeight - elementVisible) {
-              reveals[i].classList.add("active");
-            } else {
-              reveals[i].classList.remove("active");
-            }
-          }
-        }
+  </section>
 
-        window.addEventListener("scroll", reveal);
+  <section id="projectBox">
+    <a target="_blank" href="https://www.freecodecamp.org/certification/infinity_ninja1239/javascript-algorithms-and-data-structures" class="glow-on-hover project-tile">
+      <img class="project-img" src="JADS.png">
+      <div class="project-info">
+        <p>JavaScript Algorithms and Data Structures</p>
+      </div>
+    </a>
+    <a target="_blank" href="CS50x.pdf" class="glow-on-hover project-tile">
+      <img class="project-img" src="cs50.png">
+      <div class="project-info">
+        <p>CS50x Certification</p>
+      </div>
+    </a>
+    <a target="_blank" href="https://play.google.com/store/apps/details?id=com.InfinityStudios.EnigmaSTS" class="glow-on-hover project-tile">
+      <img class="project-img" src="enigma.png">
+      <div class="project-info">
+        <p>Enigma: STS</p>
+      </div>
+    </a>
+    <a target="_blank" href="https://ipsm.itch.io/enigma-rtc" class="glow-on-hover project-tile">
+      <img class="project-img" src="https://img.itch.zone/aW1nLzU1OTc3NDcucG5n/315x250%23c/2%2BGgzp.png">
+      <div class="project-info">
+        <p>Enigma: RTC</p>
+      </div>
+    </a>
+    <a href="https://sketchfab.com/3d-models/infinity-slope-1-cc13f2f9c9884de6b81559380b6d1e8d?utm_medium=embed&utm_campaign=share-popup&utm_content=cc13f2f9c9884de6b81559380b6d1e8d" target="_blank" class="glow-on-hover project-tile">
+      <iframe class="project-img" src="https://sketchfab.com/models/cc13f2f9c9884de6b81559380b6d1e8d/embed"></iframe>
+      <div class="project-info">
+        <p>Infinity Slope 1</p>
+      </div>
+    </a>
+    <a href="https://www.freecodecamp.org/certification/infinity_ninja1239/responsive-web-design" target="_blank" class="glow-on-hover project-tile">
+      <img class="project-img" src="RWD.png">
+      <div class="project-info">
+        <p>Responsive Web Design</p>
+      </div>
+    </a>
+  </section>
 
-    </script>
+  <div id="footer">
+    <p id="ooter">
+      Email: bradleyjoe007@gmail.com<br>
+      Phone: +447587956344
+    </p>
+  </div>
+
+</body>
+<script>
+  let section = document.querySelectorAll("section");
+  let menu = document.querySelectorAll("header nav a");
+  window.onscroll = () => {
+    section.forEach((i) => {
+      let top = window.scrollY;
+      let offset = i.offsetTop - 150;
+      let height = i.offsetHeight;
+      let id = i.getAttribute("id");
+      if (top >= offset && top < offset + height) {
+        menu.forEach((link) => {
+          link.classList.remove("active");
+          document
+            .querySelector("header nav a[href*=" + id + "]")
+            .classList.add("active");
+        });
+      }
+    });
+  };
+
+  function reveal() {
+    var reveals = document.querySelectorAll(".reveal");
+    for (var i = 0; i < reveals.length; i++) {
+      var windowHeight = window.innerHeight;
+      var elementTop = reveals[i].getBoundingClientRect().top;
+      var elementVisible = 150;
+      if (elementTop < windowHeight - elementVisible) {
+        reveals[i].classList.add("active");
+      } else {
+        reveals[i].classList.remove("active");
+      }
+    }
+  }
+  window.addEventListener("scroll", reveal);
+</script>
+
 </html>
