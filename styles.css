@@ -12,9 +12,9 @@ html {
 body {
   font-family: "Roboto", sans-serif;
   line-height: 1.6;
-  color: #333; /* Dark gray text */
-  background-color: #f9f9f9; /* Light gray background */
-  padding: 0 20px;
+  color: #ddd; /* Light gray text */
+  background: linear-gradient(145deg, #1a1a1a, #121212);
+padding: 0 20px;
 }
 
 /* Navigation Bar */
@@ -23,14 +23,10 @@ nav {
   top: 0;
   left: 0;
   width: 100%;
-  background: linear-gradient(
-    90deg,
-    #ff1a1a,
-    #ff4d4d
-  ); /* Gradient background */
-  color: white;
+  background: linear-gradient(90deg, #333, #222); /* Dark gradient */
+  color: #ddd; /* Light gray text */
   z-index: 1000; /* Ensure it stays above other elements */
-  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2); /* Subtle shadow */
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.5); /* Darker shadow */
   transition: top 0.3s ease-in-out, background 0.3s ease-in-out; /* Smooth transition for hiding/showing and hover effects */
 }
 
@@ -44,7 +40,7 @@ nav ul {
 }
 
 nav ul li a {
-  color: #fff;
+  color: #ddd; /* Light gray */
   text-decoration: none;
   font-weight: bold;
   padding: 10px 15px;
@@ -53,8 +49,8 @@ nav ul li a {
 }
 
 nav ul li a:hover {
-  background: #fff;
-  color: #ff1a1a; /* Red text on hover */
+  background: #444; /* Darker gray */
+  color: #fff; /* White text */
   transform: scale(1.1); /* Slight zoom effect */
 }
 
@@ -67,14 +63,15 @@ header {
   text-align: center;
   padding: 20px;
   margin-top: 60px; /* Space for fixed navbar */
-  background-color: #f9f9f9;
-  border-bottom: 1px solid #ddd;
+  background: linear-gradient(145deg, #2a2a2a, #1e1e1e); /* Dark gradient */
+  border-bottom: 1px solid #333;
   margin-bottom: 20px;
+  color: #ddd; /* Light gray text */
 }
 
 header h1 {
   font-size: 2rem;
-  color: #333;
+  color: #ccc; /* Light gray */
   margin-bottom: 15px;
 }
 
@@ -85,13 +82,13 @@ header .contact-icons {
 }
 
 header .contact-icons a {
-  color: #ff1a1a;
+  color: #bbb; /* Light gray */
   font-size: 1.5rem;
   transition: color 0.3s ease, transform 0.3s ease;
 }
 
 header .contact-icons a:hover {
-  color: #333;
+  color: #fff; /* White on hover */
   transform: scale(1.2); /* Slight zoom effect on hover */
 }
 
@@ -103,7 +100,7 @@ section {
 section h2 {
   font-size: 2rem;
   margin-bottom: 20px;
-  color: #ff1a1a; /* Red */
+  color: #ccc; /* Light gray */
   text-align: center;
 }
 
@@ -114,7 +111,7 @@ section h2 {
 
 #skills h2 {
   text-align: center;
-  color: #ff1a1a; /* Red */
+  color: #ccc; /* Light gray */
   margin-bottom: 20px;
 }
 
@@ -130,12 +127,14 @@ section h2 {
   align-items: start; /* Align items to the top */
   grid-auto-rows: min-content; /* Dynamically adjust row height */
   grid-auto-flow: dense; /* Fill gaps dynamically */
+  background: linear-gradient(145deg, #1a1a1a, #121212); /* Dark gradient */
 }
 
 /* Skill Tile */
 .skill-tile {
-  background: #f9f9f9; /* Light gray background for tiles */
-  border: 1px solid #ddd;
+  position: relative; /* Enable positioning for child elements like icons */
+  background: linear-gradient(145deg, #2a2a2a, #1e1e1e); /* Dark gradient */
+  border: 1px solid #333;
   border-radius: 5px;
   padding: 15px;
   text-align: center;
@@ -144,11 +143,12 @@ section h2 {
   max-width: 250px; /* Optional: Limit tile width */
   transition: transform 0.3s, box-shadow 0.3s, grid-row 0.3s; /* Smooth transition for resizing */
   overflow: hidden; /* Prevent content overflow */
+  color: #ddd; /* Light gray text */
 }
 
 .skill-tile:hover {
   transform: translateY(-5px);
-  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+  box-shadow: 0 6px 12px rgba(0, 0, 0, 0.7); /* Darker shadow */
 }
 
 /* Expanded Skill Tile */
@@ -159,14 +159,32 @@ section h2 {
 
 .skill-tile label {
   font-size: 1rem;
-  color: #333; /* Dark gray */
+  color: #ccc; /* Light gray */
   margin-bottom: 10px;
   display: block;
 }
 
+/* Skill Icons */
+.skill-icons {
+  position: absolute; /* Position relative to the skill tile */
+  top: 10px; /* Distance from the top */
+  right: 10px; /* Distance from the right */
+  font-size: 1.5rem; /* Icon size */
+  color: #bbb; /* Light gray */
+}
+
+.skill-icons i {
+  transition: color 0.3s ease, transform 0.3s ease; /* Smooth hover effect */
+}
+
+.skill-tile:hover .skill-icons i {
+  color: #fff; /* White on hover */
+  transform: scale(1.2); /* Slight zoom effect on hover */
+}
+
 /* Progress Bar */
 .progress-bar {
-  background: #ddd; /* Light gray background for the bar */
+  background: #444; /* Dark gray */
   border-radius: 5px;
   overflow: hidden;
   height: 15px;
@@ -177,10 +195,10 @@ section h2 {
 .progress {
   height: 100%;
   transition: width 0.3s ease-in-out;
-  background: #28a745; /* Default green color */
+background: #28a745; /* Default green color */
 }
+background: #28a745; /* Default green color */
 
-/* Color-coded progress bars */
 .progress[data-value="low"] {
   background: #ff1a1a; /* Red for low progress */
 }
@@ -196,12 +214,13 @@ section h2 {
 /* Skill Content */
 .skill-content {
   display: none; /* Hidden by default */
-  background: #f1f1f1; /* Light background for expanded content */
-  border-top: 1px solid #ddd;
+  background: #1e1e1e; /* Dark gray */
+  border-top: 1px solid #333;
   padding: 10px;
   margin-top: 10px;
   text-align: left;
   overflow: auto; /* Prevent content from affecting layout */
+  color: #bbb; /* Light gray */
 }
 
 .skill-content.expanded {
@@ -229,20 +248,20 @@ section h2 {
 /* Styled Links Inside Skill Tiles */
 .skill-content a {
   display: inline-block;
-  color: #ff1a1a; /* Red color for links */
+  color: #888; /* Medium gray */
   text-decoration: none;
   font-weight: bold;
   margin: 3px 0; /* Reduced margin */
   padding: 3px 8px; /* Reduced padding */
   font-size: 0.9rem; /* Slightly smaller font size */
-  border: 1px solid #ff1a1a; /* Border matching the link color */
+  border: 1px solid #555; /* Darker border */
   border-radius: 5px;
   transition: all 0.3s ease-in-out;
 }
 
 .skill-content a:hover {
-  background-color: #ff1a1a; /* Red background on hover */
-  color: #fff; /* White text on hover */
+  background: #555; /* Darker gray */
+  color: #fff; /* White text */
   transform: scale(1.05); /* Slight zoom effect */
 }
 
@@ -253,17 +272,18 @@ section h2 {
 /* Styling for boxes */
 .box {
   position: relative; /* To position the icons inside the box */
-  background: #fff;
-  border: 1px solid #ddd;
+  background: linear-gradient(145deg, #2a2a2a, #1e1e1e); /* Dark gradient */
+  border: 1px solid #333;
   padding: 20px;
   margin-bottom: 20px;
   box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
   transition: transform 0.3s, box-shadow 0.3s;
+  color: #ddd; /* Light gray text */
 }
 
 .box:hover {
   transform: translateY(-5px);
-  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+  box-shadow: 0 6px 12px rgba(0, 0, 0, 0.7); /* Darker shadow */
 }
 
 /* Styling for icons */
@@ -288,23 +308,23 @@ section h2 {
 .box h3 {
   font-size: 1.5rem;
   margin-bottom: 10px;
-  color: #333; /* Dark gray */
+  color: #ccc; /* Light gray */
 }
 
 .box p {
   font-size: 1rem;
   margin-bottom: 10px;
-  color: #555; /* Muted gray */
+  color: #bbb; /* Muted gray */
 }
 
 .box a {
-  color: #ff1a1a; /* Red */
+  color: #888; /* Medium gray */
   text-decoration: none;
   font-weight: bold;
 }
 
 .box a:hover {
-  text-decoration: underline;
+  color: #fff; /* White text */
 }
 
 /* Contact Links */
@@ -322,7 +342,7 @@ section h2 {
   transition: color 0.3s;
 }
 
-.contact-links a:hover {
+contact-links a:hover {
   color: #b30000; /* Darker red */
 }
 
@@ -330,13 +350,14 @@ section h2 {
 #contact {
   text-align: center;
   padding: 20px 0;
-  background-color: #f9f9f9;
-  border-top: 1px solid #ddd;
+  background: linear-gradient(145deg, #2a2a2a, #1e1e1e);  /* Dark gradient */
+  border-top: 1px solid #333;
+  color: #ddd; /* Light gray text */
 }
 
 #contact h2 {
   font-size: 1.8rem;
-  color: #333;
+  color: #ccc; /* Light gray */
   margin-bottom: 15px;
 }
 
@@ -347,13 +368,13 @@ section h2 {
 }
 
 #contact .contact-icons a {
-  color: #ff1a1a;
+  color: #bbb; /* Light gray */
   font-size: 1.5rem;
   transition: color 0.3s ease, transform 0.3s ease;
 }
 
 #contact .contact-icons a:hover {
-  color: #333;
+  color: #fff; /* White on hover */
   transform: scale(1.2); /* Slight zoom effect on hover */
 }
 
@@ -361,13 +382,14 @@ section h2 {
 footer {
   text-align: center;
   padding: 20px 0;
-  background: #ff1a1a; /* Red */
-  color: #fff;
+  background: #222; /* Dark gray */
+  color: #ddd; /* Light gray */
   margin-top: 40px;
 }
 
 footer p {
   font-size: 1rem;
+  color: #bbb; /* Muted gray */
 }
 
 /* Responsive Design */
