@@ -10,7 +10,7 @@ html {
 }
 
 body {
-  font-family: 'Roboto', sans-serif;
+  font-family: "Roboto", sans-serif;
   line-height: 1.6;
   color: #333; /* Dark gray text */
   background-color: #f9f9f9; /* Light gray background */
@@ -23,7 +23,11 @@ nav {
   top: 0;
   left: 0;
   width: 100%;
-  background: linear-gradient(90deg, #ff1a1a, #ff4d4d); /* Gradient background */
+  background: linear-gradient(
+    90deg,
+    #ff1a1a,
+    #ff4d4d
+  ); /* Gradient background */
   color: white;
   z-index: 1000; /* Ensure it stays above other elements */
   box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2); /* Subtle shadow */
@@ -61,18 +65,34 @@ nav ul li a:active {
 /* Header */
 header {
   text-align: center;
-  margin: 40px 0;
+  padding: 20px;
+  margin-top: 60px; /* Space for fixed navbar */
+  background-color: #f9f9f9;
+  border-bottom: 1px solid #ddd;
+  margin-bottom: 20px;
 }
 
 header h1 {
-  font-size: 3rem;
-  color: #ff1a1a; /* Red */
-  margin-bottom: 10px;
+  font-size: 2rem;
+  color: #333;
+  margin-bottom: 15px;
 }
 
-header p {
-  font-size: 1.2rem;
-  color: #555; /* Muted gray */
+header .contact-icons {
+  display: flex;
+  justify-content: center;
+  gap: 15px;
+}
+
+header .contact-icons a {
+  color: #ff1a1a;
+  font-size: 1.5rem;
+  transition: color 0.3s ease, transform 0.3s ease;
+}
+
+header .contact-icons a:hover {
+  color: #333;
+  transform: scale(1.2); /* Slight zoom effect on hover */
 }
 
 /* Section Styling */
@@ -101,7 +121,10 @@ section h2 {
 /* Skills Grid */
 .skills-grid {
   display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(200px, 1fr)); /* Responsive grid */
+  grid-template-columns: repeat(
+    auto-fit,
+    minmax(200px, 1fr)
+  ); /* Responsive grid */
   gap: 20px;
   justify-items: center; /* Center align tiles */
   align-items: start; /* Align items to the top */
@@ -203,6 +226,30 @@ section h2 {
   color: #555;
 }
 
+/* Styled Links Inside Skill Tiles */
+.skill-content a {
+  display: inline-block;
+  color: #ff1a1a; /* Red color for links */
+  text-decoration: none;
+  font-weight: bold;
+  margin: 3px 0; /* Reduced margin */
+  padding: 3px 8px; /* Reduced padding */
+  font-size: 0.9rem; /* Slightly smaller font size */
+  border: 1px solid #ff1a1a; /* Border matching the link color */
+  border-radius: 5px;
+  transition: all 0.3s ease-in-out;
+}
+
+.skill-content a:hover {
+  background-color: #ff1a1a; /* Red background on hover */
+  color: #fff; /* White text on hover */
+  transform: scale(1.05); /* Slight zoom effect */
+}
+
+.skill-content a:active {
+  transform: scale(1); /* Reset zoom on click */
+}
+
 /* Styling for boxes */
 .box {
   position: relative; /* To position the icons inside the box */
@@ -277,6 +324,37 @@ section h2 {
 
 .contact-links a:hover {
   color: #b30000; /* Darker red */
+}
+
+/* Contact Section */
+#contact {
+  text-align: center;
+  padding: 20px 0;
+  background-color: #f9f9f9;
+  border-top: 1px solid #ddd;
+}
+
+#contact h2 {
+  font-size: 1.8rem;
+  color: #333;
+  margin-bottom: 15px;
+}
+
+#contact .contact-icons {
+  display: flex;
+  justify-content: center;
+  gap: 15px;
+}
+
+#contact .contact-icons a {
+  color: #ff1a1a;
+  font-size: 1.5rem;
+  transition: color 0.3s ease, transform 0.3s ease;
+}
+
+#contact .contact-icons a:hover {
+  color: #333;
+  transform: scale(1.2); /* Slight zoom effect on hover */
 }
 
 /* Footer */
