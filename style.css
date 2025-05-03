@@ -1,14 +1,330 @@
-body{
-    background-color: black;
-    color: white;
+/* General Reset */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
 }
-.staffBox{
-    padding:10px;
-    margin:10px;
+
+html {
+  scroll-behavior: smooth;
 }
-.project-tile{
-    padding:10px;
-    margin:10px;
-    background-color:#111;
-    border-radius: 25px;
+
+body {
+  font-family: 'Roboto', sans-serif;
+  line-height: 1.6;
+  color: #333; /* Dark gray text */
+  background-color: #f9f9f9; /* Light gray background */
+  padding: 0 20px;
+}
+
+/* Navigation Bar */
+nav {
+  position: fixed; /* Fix the navbar at the top */
+  top: 0;
+  left: 0;
+  width: 100%;
+  background: linear-gradient(90deg, #ff1a1a, #ff4d4d); /* Gradient background */
+  color: white;
+  z-index: 1000; /* Ensure it stays above other elements */
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2); /* Subtle shadow */
+  transition: top 0.3s ease-in-out, background 0.3s ease-in-out; /* Smooth transition for hiding/showing and hover effects */
+}
+
+nav ul {
+  list-style: none;
+  display: flex;
+  justify-content: center;
+  gap: 20px;
+  padding: 10px 0;
+  margin: 0;
+}
+
+nav ul li a {
+  color: #fff;
+  text-decoration: none;
+  font-weight: bold;
+  padding: 10px 15px;
+  border-radius: 5px;
+  transition: background 0.3s, color 0.3s, transform 0.3s; /* Smooth hover effects */
+}
+
+nav ul li a:hover {
+  background: #fff;
+  color: #ff1a1a; /* Red text on hover */
+  transform: scale(1.1); /* Slight zoom effect */
+}
+
+nav ul li a:active {
+  transform: scale(1); /* Reset zoom on click */
+}
+
+/* Header */
+header {
+  text-align: center;
+  margin: 40px 0;
+}
+
+header h1 {
+  font-size: 3rem;
+  color: #ff1a1a; /* Red */
+  margin-bottom: 10px;
+}
+
+header p {
+  font-size: 1.2rem;
+  color: #555; /* Muted gray */
+}
+
+/* Section Styling */
+section {
+  margin-bottom: 40px;
+}
+
+section h2 {
+  font-size: 2rem;
+  margin-bottom: 20px;
+  color: #ff1a1a; /* Red */
+  text-align: center;
+}
+
+/* Skills Section */
+#skills {
+  margin-top: 40px;
+}
+
+#skills h2 {
+  text-align: center;
+  color: #ff1a1a; /* Red */
+  margin-bottom: 20px;
+}
+
+/* Skills Grid */
+.skills-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(200px, 1fr)); /* Responsive grid */
+  gap: 20px;
+  justify-items: center; /* Center align tiles */
+  align-items: start; /* Align items to the top */
+  grid-auto-rows: min-content; /* Dynamically adjust row height */
+  grid-auto-flow: dense; /* Fill gaps dynamically */
+}
+
+/* Skill Tile */
+.skill-tile {
+  background: #f9f9f9; /* Light gray background for tiles */
+  border: 1px solid #ddd;
+  border-radius: 5px;
+  padding: 15px;
+  text-align: center;
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+  width: 100%; /* Ensure consistent tile width */
+  max-width: 250px; /* Optional: Limit tile width */
+  transition: transform 0.3s, box-shadow 0.3s, grid-row 0.3s; /* Smooth transition for resizing */
+  overflow: hidden; /* Prevent content overflow */
+}
+
+.skill-tile:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+}
+
+/* Expanded Skill Tile */
+.skill-tile.expanded {
+  grid-row: span 2; /* Make the expanded tile span two rows */
+  transition: grid-row 0.3s ease-in-out; /* Smooth transition for resizing */
+}
+
+.skill-tile label {
+  font-size: 1rem;
+  color: #333; /* Dark gray */
+  margin-bottom: 10px;
+  display: block;
+}
+
+/* Progress Bar */
+.progress-bar {
+  background: #ddd; /* Light gray background for the bar */
+  border-radius: 5px;
+  overflow: hidden;
+  height: 15px;
+  width: 100%;
+  margin-top: 10px;
+}
+
+.progress {
+  height: 100%;
+  transition: width 0.3s ease-in-out;
+  background: #28a745; /* Default green color */
+}
+
+/* Color-coded progress bars */
+.progress[data-value="low"] {
+  background: #ff1a1a; /* Red for low progress */
+}
+
+.progress[data-value="medium"] {
+  background: #ffc107; /* Yellow for medium progress */
+}
+
+.progress[data-value="high"] {
+  background: #28a745; /* Green for high progress */
+}
+
+/* Skill Content */
+.skill-content {
+  display: none; /* Hidden by default */
+  background: #f1f1f1; /* Light background for expanded content */
+  border-top: 1px solid #ddd;
+  padding: 10px;
+  margin-top: 10px;
+  text-align: left;
+  overflow: auto; /* Prevent content from affecting layout */
+}
+
+.skill-content.expanded {
+  display: block; /* Show expanded content */
+}
+
+.skill-content h4 {
+  margin: 10px 0 5px;
+  font-size: 1rem;
+  color: #333;
+}
+
+.skill-content ul {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+.skill-content ul li {
+  margin-bottom: 5px;
+  font-size: 0.9rem;
+  color: #555;
+}
+
+/* Styling for boxes */
+.box {
+  position: relative; /* To position the icons inside the box */
+  background: #fff;
+  border: 1px solid #ddd;
+  padding: 20px;
+  margin-bottom: 20px;
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+  transition: transform 0.3s, box-shadow 0.3s;
+}
+
+.box:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+}
+
+/* Styling for icons */
+.icons {
+  position: absolute;
+  top: 10px;
+  right: 10px;
+  display: flex;
+  gap: 5px; /* Space between icons */
+}
+
+.icons i {
+  font-size: 1.5rem; /* Smaller size */
+  color: #aaa; /* Grayish color */
+  transition: color 0.3s;
+}
+
+.box:hover .icons i {
+  color: #ff1a1a; /* Red on hover */
+}
+
+.box h3 {
+  font-size: 1.5rem;
+  margin-bottom: 10px;
+  color: #333; /* Dark gray */
+}
+
+.box p {
+  font-size: 1rem;
+  margin-bottom: 10px;
+  color: #555; /* Muted gray */
+}
+
+.box a {
+  color: #ff1a1a; /* Red */
+  text-decoration: none;
+  font-weight: bold;
+}
+
+.box a:hover {
+  text-decoration: underline;
+}
+
+/* Contact Links */
+.contact-links {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 20px;
+}
+
+.contact-links a {
+  color: #ff1a1a; /* Red */
+  text-decoration: none;
+  font-weight: bold;
+  transition: color 0.3s;
+}
+
+.contact-links a:hover {
+  color: #b30000; /* Darker red */
+}
+
+/* Footer */
+footer {
+  text-align: center;
+  padding: 20px 0;
+  background: #ff1a1a; /* Red */
+  color: #fff;
+  margin-top: 40px;
+}
+
+footer p {
+  font-size: 1rem;
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+  header h1 {
+    font-size: 2.5rem;
+  }
+
+  section h2 {
+    font-size: 1.8rem;
+  }
+
+  .box h3 {
+    font-size: 1.3rem;
+  }
+
+  .box p {
+    font-size: 0.9rem;
+  }
+}
+
+@media (max-width: 480px) {
+  header h1 {
+    font-size: 2rem;
+  }
+
+  section h2 {
+    font-size: 1.5rem;
+  }
+
+  .box h3 {
+    font-size: 1.2rem;
+  }
+
+  .box p {
+    font-size: 0.8rem;
+  }
 }
