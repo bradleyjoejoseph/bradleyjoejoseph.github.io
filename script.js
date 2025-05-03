@@ -37,6 +37,7 @@ document.addEventListener("DOMContentLoaded", () => {
     {
       name: "Coding",
       progress: 45,
+      icon: "fa-solid fa-code",
       projects: [
         { name: "Enigma: RTC", link: "#enigma-rtc" },
         { name: "Infinity Arcade", link: "#infinity-arcade" },
@@ -58,6 +59,7 @@ document.addEventListener("DOMContentLoaded", () => {
     {
       name: "Flask",
       progress: 35,
+      icon: "devicon devicon-flask-original",
       projects: [{ name: "Infinity Arcade", link: "#infinity-arcade" }],
       certifications: [
         { name: "CS50x Certification", link: "#cs50x-certification" },
@@ -66,6 +68,7 @@ document.addEventListener("DOMContentLoaded", () => {
     {
       name: "JavaScript",
       progress: 35,
+      icon: "devicon devicon-javascript-plain",
       projects: [],
       certifications: [
         {
@@ -82,6 +85,7 @@ document.addEventListener("DOMContentLoaded", () => {
     {
       name: "HTML",
       progress: 90,
+      icon: "devicon devicon-html5-plain",
       projects: [{ name: "Infinity Arcade", link: "#infinity-arcade" }],
       certifications: [
         { name: "Responsive Web Design", link: "#responsive-web-design" },
@@ -90,6 +94,7 @@ document.addEventListener("DOMContentLoaded", () => {
     {
       name: "CSS",
       progress: 75,
+      icon: "devicon devicon-css3-plain",
       projects: [],
       certifications: [
         { name: "Responsive Web Design", link: "#responsive-web-design" },
@@ -98,6 +103,7 @@ document.addEventListener("DOMContentLoaded", () => {
     {
       name: "Python",
       progress: 70,
+      icon: "devicon devicon-python-plain",
       projects: [{ name: "Infinity Arcade", link: "#infinity-arcade" }],
       certifications: [
         { name: "CS50x Certification", link: "#cs50x-certification" },
@@ -106,6 +112,7 @@ document.addEventListener("DOMContentLoaded", () => {
     {
       name: "SQL",
       progress: 65,
+      icon: "fa-solid fa-database",
       projects: [{ name: "Infinity Arcade", link: "#infinity-arcade" }],
       certifications: [
         { name: "CS50x Certification", link: "#cs50x-certification" },
@@ -114,12 +121,14 @@ document.addEventListener("DOMContentLoaded", () => {
     {
       name: "C#",
       progress: 45,
+      icon: "devicon devicon-csharp-plain",
       projects: [{ name: "Enigma: RTC", link: "#enigma-rtc" }],
       certifications: [],
     },
     {
       name: "3D Modelling",
       progress: 20,
+      icon: "fa-solid fa-cube",
       projects: [
         { name: "Infinity Slope 1", link: "#infinity-slope-1" },
         { name: "iPhone 8", link: "#iphone-8" },
@@ -129,6 +138,7 @@ document.addEventListener("DOMContentLoaded", () => {
     {
       name: "Blender",
       progress: 20,
+      icon: "devicon devicon-blender-original",
       projects: [
         { name: "Infinity Slope 1", link: "#infinity-slope-1" },
         { name: "iPhone 8", link: "#iphone-8" },
@@ -138,6 +148,7 @@ document.addEventListener("DOMContentLoaded", () => {
     {
       name: "React",
       progress: 30,
+      icon: "devicon devicon-react-original",
       projects: [],
       certifications: [
         {
@@ -149,6 +160,7 @@ document.addEventListener("DOMContentLoaded", () => {
     {
       name: "Data Analysis",
       progress: 10,
+      icon: "fa-solid fa-chart-pie",
       projects: [],
       certifications: [
         { name: "Data Visualization", link: "#data-visualization" },
@@ -157,6 +169,7 @@ document.addEventListener("DOMContentLoaded", () => {
     {
       name: "C",
       progress: 25,
+      icon: "devicon devicon-c-plain",
       projects: [],
       certifications: [
         { name: "CS50x Certification", link: "#cs50x-certification" },
@@ -165,6 +178,7 @@ document.addEventListener("DOMContentLoaded", () => {
     {
         name: "Django",
         progress: 10,
+        icon: "devicon devicon-django-plain",
         projects: [],
         certifications: [
           { name: "CS50x Certification", link: "#cs50x-certification" },
@@ -173,6 +187,7 @@ document.addEventListener("DOMContentLoaded", () => {
       {
         name: "D3.js",
         progress: 30,
+        icon: "devicon devicon-d3js-plain",
         projects: [],
         certifications: [
           { name: "Data Visualization", link: "#data-visualization" },
@@ -203,7 +218,10 @@ document.addEventListener("DOMContentLoaded", () => {
     }
 
     skillTile.innerHTML = `
-      <label>${skill.name}</label>
+    <div class="skill-icons">
+        <i class="${skill.icon}"></i>
+      </div>  
+    <label>${skill.name}</label>
       <div class="progress-bar">
         <div class="progress" style="width: ${skill.progress}%; background-color: ${progressColor};"></div>
       </div>
