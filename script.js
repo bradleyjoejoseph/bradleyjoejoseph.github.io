@@ -1,30 +1,34 @@
-document.querySelectorAll('.accordion-header').forEach(header => {
-  header.addEventListener('click', () => {
+document.querySelectorAll(".accordion-header").forEach((header) => {
+  header.addEventListener("click", () => {
     const accordionContent = header.nextElementSibling;
 
     // Toggle active class for the header
-    header.classList.toggle('active');
+    header.classList.toggle("active");
 
     // Expand or collapse the content
-    if (accordionContent.classList.contains('open')) {
-      accordionContent.classList.remove('open');
+    if (accordionContent.classList.contains("open")) {
+      accordionContent.classList.remove("open");
     } else {
-      accordionContent.classList.add('open');
+      accordionContent.classList.add("open");
     }
   });
 });
 
 // Tab functionality
-document.querySelectorAll('.tab').forEach(tab => {
-  tab.addEventListener('click', () => {
+document.querySelectorAll(".tab").forEach((tab) => {
+  tab.addEventListener("click", () => {
     // Remove active class from all tabs and contents
-    document.querySelectorAll('.tab').forEach(t => t.classList.remove('active'));
-    document.querySelectorAll('.tab-content').forEach(content => content.classList.remove('active'));
+    document
+      .querySelectorAll(".tab")
+      .forEach((t) => t.classList.remove("active"));
+    document
+      .querySelectorAll(".tab-content")
+      .forEach((content) => content.classList.remove("active"));
 
     // Add active class to the clicked tab and corresponding content
-    tab.classList.add('active');
+    tab.classList.add("active");
     const target = document.querySelector(tab.dataset.target);
-    target.classList.add('active');
+    target.classList.add("active");
   });
 });
 
@@ -33,48 +37,79 @@ document.addEventListener("DOMContentLoaded", () => {
     {
       name: "Coding",
       progress: 45,
-      projects: [{ name: "Enigma: RTC", link: "#enigma-rtc" }],
-      certifications: [{ name: "CS50x Certification", link: "#cs50x-certification" },
-        { name: "JavaScript Algorithms and Data Structures", link: "#javascript-algorithms" },
+      projects: [
+        { name: "Enigma: RTC", link: "#enigma-rtc" },
+        { name: "Infinity Arcade", link: "#infinity-arcade" },
+      ],
+      certifications: [
+        { name: "CS50x Certification", link: "#cs50x-certification" },
+        {
+          name: "JavaScript Algorithms and Data Structures",
+          link: "#javascript-algorithms",
+        },
         { name: "Responsive Web Design", link: "#responsive-web-design" },
-        { name: "Front End Development Libraries", link: "#front-end-libraries" },
+        {
+          name: "Front End Development Libraries",
+          link: "#front-end-libraries",
+        },
         { name: "Data Visualization", link: "#data-visualization" },
       ],
-
+    },
+    {
+      name: "Flask",
+      progress: 35,
+      projects: [{ name: "Infinity Arcade", link: "#infinity-arcade" }],
+      certifications: [
+        { name: "CS50x Certification", link: "#cs50x-certification" },
+      ],
     },
     {
       name: "JavaScript",
       progress: 35,
       projects: [],
       certifications: [
-        { name: "Front End Development Libraries", link: "#front-end-libraries" },
+        {
+          name: "Front End Development Libraries",
+          link: "#front-end-libraries",
+        },
         { name: "Data Visualization", link: "#data-visualization" },
-        { name: "JavaScript Algorithms and Data Structures", link: "#javascript-algorithms" },
+        {
+          name: "JavaScript Algorithms and Data Structures",
+          link: "#javascript-algorithms",
+        },
       ],
     },
     {
       name: "HTML",
       progress: 90,
-      projects: [],
-      certifications: [{ name: "Responsive Web Design", link: "#responsive-web-design" }],
+      projects: [{ name: "Infinity Arcade", link: "#infinity-arcade" }],
+      certifications: [
+        { name: "Responsive Web Design", link: "#responsive-web-design" },
+      ],
     },
     {
       name: "CSS",
       progress: 75,
-      projects: [{ name: "Responsive Web Design", link: "#responsive-web-design" }],
-      certifications: [],
+      projects: [],
+      certifications: [
+        { name: "Responsive Web Design", link: "#responsive-web-design" },
+      ],
     },
     {
       name: "Python",
       progress: 70,
-      projects: [],
-      certifications: [{ name: "CS50x Certification", link: "#cs50x-certification" }],
+      projects: [{ name: "Infinity Arcade", link: "#infinity-arcade" }],
+      certifications: [
+        { name: "CS50x Certification", link: "#cs50x-certification" },
+      ],
     },
     {
       name: "SQL",
       progress: 65,
-      projects: [],
-      certifications: [{ name: "CS50x Certification", link: "#cs50x-certification" }],
+      projects: [{ name: "Infinity Arcade", link: "#infinity-arcade" }],
+      certifications: [
+        { name: "CS50x Certification", link: "#cs50x-certification" },
+      ],
     },
     {
       name: "C#",
@@ -104,20 +139,45 @@ document.addEventListener("DOMContentLoaded", () => {
       name: "React",
       progress: 30,
       projects: [],
-      certifications: [{ name: "Front End Development Libraries", link: "#front-end-libraries" }],
+      certifications: [
+        {
+          name: "Front End Development Libraries",
+          link: "#front-end-libraries",
+        },
+      ],
     },
     {
       name: "Data Analysis",
       progress: 10,
       projects: [],
-      certifications: [{ name: "Data Visualization", link: "#data-visualization" }],
+      certifications: [
+        { name: "Data Visualization", link: "#data-visualization" },
+      ],
     },
     {
       name: "C",
       progress: 25,
       projects: [],
-      certifications: [{ name: "CS50x Certification", link: "#cs50x-certification" }],
+      certifications: [
+        { name: "CS50x Certification", link: "#cs50x-certification" },
+      ],
     },
+    {
+        name: "Django",
+        progress: 10,
+        projects: [],
+        certifications: [
+          { name: "CS50x Certification", link: "#cs50x-certification" },
+        ],
+      },
+      {
+        name: "D3.js",
+        progress: 30,
+        projects: [],
+        certifications: [
+          { name: "Data Visualization", link: "#data-visualization" },
+        ],
+      },
   ];
 
   const skillsGrid = document.querySelector(".skills-grid");
@@ -178,7 +238,9 @@ document.addEventListener("DOMContentLoaded", () => {
       skillContent.classList.add("expanded");
 
       // Find the skill data
-      const skillData = skills.find((skill) => skill.name.toLowerCase() === skillName);
+      const skillData = skills.find(
+        (skill) => skill.name.toLowerCase() === skillName
+      );
 
       // Populate the content with related projects and certifications
       skillContent.innerHTML = `
@@ -187,7 +249,10 @@ document.addEventListener("DOMContentLoaded", () => {
           ${
             skillData.projects.length > 0
               ? skillData.projects
-                  .map((project) => `<li><a href="${project.link}">${project.name}</a></li>`)
+                  .map(
+                    (project) =>
+                      `<li><a href="${project.link}">${project.name}</a></li>`
+                  )
                   .join("")
               : "<li>No projects available</li>"
           }
@@ -197,7 +262,9 @@ document.addEventListener("DOMContentLoaded", () => {
           ${
             skillData.certifications.length > 0
               ? skillData.certifications
-                  .map((cert) => `<li><a href="${cert.link}">${cert.name}</a></li>`)
+                  .map(
+                    (cert) => `<li><a href="${cert.link}">${cert.name}</a></li>`
+                  )
                   .join("")
               : "<li>No certifications available</li>"
           }
