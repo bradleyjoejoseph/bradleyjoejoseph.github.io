@@ -1,262 +1,182 @@
 <!DOCTYPE html>
-<html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="description" content="Interactive Portfolio of Bradley Joe Joseph" />
+    <title>Bradley Joe Joseph - Portfolio</title>
+    <link rel="stylesheet" href="styles.css" />
+    <link
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css"
+      rel="stylesheet"
+    />
+    <link
+      href="https://cdn.jsdelivr.net/gh/devicons/devicon@v2.15.1/devicon.min.css"
+      rel="stylesheet"
+    />
+  </head>
+  <body>
+    <nav>
+      <ul>
+        <li><a href="#about">About</a></li>
+        <li><a href="#skills">Skills</a></li>
+        <li><a href="#projects">Projects</a></li>
+        <li><a href="#certifications">Certifications</a></li>
+        <li><a href="#contact">Contact</a></li>
+      </ul>
+    </nav>
 
-<head>
-  <link rel="preconnect" href="https://fonts.googleapis.com">
-  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@100&display=swap" rel="stylesheet">
+    <header>
+      <h1>Bradley Joe Joseph</h1>
+      <p>Web Developer | Designer | Programmer</p>
+    </header>
 
-  <link rel="icon" href="PFP.png">
-  <title>Bradley Joseph</title>
-  <style>
-    ::-webkit-scrollbar {
-      display: none;
-    }
+    <main>
+      <section id="about">
+        <h2>About Me</h2>
+        <p>
+          Hello! I'm Bradley, a passionate web developer with experience in
+          creating dynamic and responsive websites.
+        </p>
+      </section>
 
-    .glow-on-hover {
-      cursor: pointer;
-      position: relative;
-      z-index: 0;
-      border-radius: 10px;
-    }
+      <section id="skills">
+        <h2>Skills</h2>
+        <div class="skills-grid">
+          <div class="skill-tile" data-skill="coding">
+            <label for="coding">Coding</label>
+            <div class="progress-bar">
+              <div class="progress" style="width: 45%;" data-value="medium"></div>
+            </div>
+            <div class="skill-content">
+              <!-- Content for Coding will be dynamically added here -->
+            </div>
+          </div>
+          <div class="skill-tile" data-skill="javascript">
+            <label for="js">JavaScript</label>
+            <div class="progress-bar">
+              <div class="progress" style="width: 35%;" data-value="medium"></div>
+            </div>
+            <div class="skill-content">
+              <!-- Content for JavaScript will be dynamically added here -->
+            </div>
+          </div>
+          <div class="skill-tile" data-skill="html">
+            <label for="html">HTML</label>
+            <div class="progress-bar">
+              <div class="progress" style="width: 90%;" data-value="high"></div>
+            </div>
+            <div class="skill-content">
+              <!-- Content for HTML will be dynamically added here -->
+            </div>
+          </div>
+          <!-- Add similar structure for other skills -->
+        </div>
+      </section>
 
-    .glow-on-hover:before {
-      content: '';
-      background: linear-gradient(45deg, #ff0000, #ff7300, #fffb00, #48ff00, #00ffd5, #002bff, #7a00ff, #ff00c8, #ff0000);
-      position: absolute;
-      top: -2px;
-      left: -2px;
-      background-size: 400%;
-      z-index: -1;
-      filter: blur(5px);
-      width: calc(100% + 4px);
-      height: calc(100% + 4px);
-      animation: glowing 20s linear infinite;
-      opacity: 0;
-      transition: opacity .3s ease-in-out;
-      border-radius: 10px;
-    }
+      <section id="projects">
+        <h2>Projects</h2>
+        <div class="box" id="enigma-rtc">
+          <div class="icons">
+            <i class="fas fa-code"></i> <!-- General coding icon -->
+            <i class="devicon-csharp-plain"></i> <!-- C# icon -->
+          </div>
+          <h3>Enigma: RTC</h3>
+          <p>A game hosted on Itch.io.</p>
+          <a href="https://ipsm.itch.io/enigma-rtc" target="_blank">View Project</a>
+        </div>
+        <div class="box" id="infinity-slope-1">
+          <div class="icons">
+            <i class="fas fa-cube"></i> <!-- General 3D modeling icon -->
+            <i class="devicon-blender-original"></i> <!-- Blender icon -->
+          </div>
+          <h3>Infinity Slope 1</h3>
+          <p>A 3D model hosted on Sketchfab.</p>
+          <a href="https://sketchfab.com/3d-models/infinity-slope-1-cc13f2f9c9884de6b81559380b6d1e8d" target="_blank">View Project</a>
+        </div>
+        <div class="box" id="iphone-8">
+          <div class="icons">
+            <i class="fas fa-cube"></i> <!-- Mobile-related icon -->
+            <i class="devicon-blender-original"></i> <!-- Blender icon -->
+          </div>
+          <h3>iPhone 8</h3>
+          <p>A 3D model of the iPhone 8 hosted on Sketchfab.</p>
+          <a href="https://sketchfab.com/3d-models/iphone-8-example-link" target="_blank">View Project</a>
+        </div>
+      </section>
 
-    .glow-on-hover:active {
-      color: #000
-    }
+      <section id="certifications">
+        <h2>Certifications</h2>
+        <div class="box" id="cs50x-certification">
+          <div class="icons">
+            <i class="fas fa-code"></i> <!-- Coding-related icon -->
+            <i class="fab fa-python"></i> <!-- Python icon -->
+            <i class="fas fa-database"></i> <!-- SQL icon -->
+            <i class="fas fa-c"></i> <!-- C programming language icon -->
+          </div>
+          <h3>CS50x Certification</h3>
+          <p>Certification from Harvard's CS50x course.</p>
+          <a href="CS50x.pdf" target="_blank">View Certification</a>
+        </div>
+        <div class="box" id="javascript-algorithms">
+          <div class="icons">
+            <i class="fas fa-code"></i> <!-- Coding-related icon -->
+            <i class="fab fa-js"></i> <!-- JavaScript icon -->
+          </div>
+          <h3>JavaScript Algorithms and Data Structures</h3>
+          <p>Certification from FreeCodeCamp.</p>
+          <a href="https://www.freecodecamp.org/certification/bradleyjoejoseph/javascript-algorithms-and-data-structures" target="_blank">View Certification</a>
+        </div>
+        <div class="box" id="responsive-web-design">
+          <div class="icons">
+            <i class="fas fa-code"></i> <!-- Coding-related icon -->
+            <i class="fab fa-html5"></i> <!-- HTML icon -->
+            <i class="fab fa-css3-alt"></i> <!-- CSS icon -->
+          </div>
+          <h3>Responsive Web Design</h3>
+          <p>Certification from FreeCodeCamp.</p>
+          <a href="https://www.freecodecamp.org/certification/bradleyjoejoseph/responsive-web-design" target="_blank">View Certification</a>
+        </div>
+        <div class="box" id="front-end-libraries">
+          <div class="icons">
+            <i class="fas fa-code"></i> <!-- Coding-related icon -->
+            <i class="fab fa-react"></i> <!-- React icon -->
+            <i class="fab fa-js"></i> <!-- JavaScript icon -->
+          </div>
+          <h3>Front End Development Libraries</h3>
+          <p>Certification from FreeCodeCamp.</p>
+          <a href="https://www.freecodecamp.org/certification/bradleyjoejoseph/front-end-development-libraries" target="_blank">View Certification</a>
+        </div>
+        <div class="box" id="data-visualization">
+          <div class="icons">
+            <i class="fas fa-code"></i> <!-- Coding-related icon -->
+            <i class="fas fa-chart-bar"></i> <!-- Data visualization icon -->
+            <i class="fab fa-js"></i> <!-- JavaScript icon -->
+          </div>
+          <h3>Data Visualization</h3>
+          <p>Certification from FreeCodeCamp.</p>
+          <a href="https://www.freecodecamp.org/certification/bradleyjoejoseph/data-visualization" target="_blank">View Certification</a>
+        </div>
+      </section>
 
-    .glow-on-hover:hover:before {
-      opacity: 1;
-    }
+      <section id="contact">
+        <h2>Contact</h2>
+        <div class="contact-links">
+          <a href="mailto:bradleyjoe007@gmail.com">Email</a>
+          <a href="https://instagram.com/bradleyjoejoseph" target="_blank">Instagram</a>
+          <a href="https://www.youtube.com/channel/UCn49tbS3vLvhok6Y9DrPLCQ" target="_blank">YouTube</a>
+          <a href="https://www.twitch.tv/bradleyjoejoseph" target="_blank">Twitch</a>
+          <a href="https://x.com/brdleyjoejoseph" target="_blank">Twitter</a>
+          <a href="https://www.tiktok.com/@brdleyjoejoseph" target="_blank">TikTok</a>
+          <a href="https://www.linkedin.com/in/bradley-joseph-730662235/" target="_blank">LinkedIn</a>
+          <a href="tel:+447587956344">Phone</a>
+        </div>
+      </section>
+    </main>
 
-    .glow-on-hover:after {
-      z-index: -1;
-      content: '';
-      position: absolute;
-      width: 100%;
-      height: 100%;
-      background: #111;
-      left: 0;
-      top: 0;
-      border-radius: 10px;
-    }
-
-    @keyframes glowing {
-      0% {
-        background-position: 0 0;
-      }
-
-      50% {
-        background-position: 400% 0;
-      }
-
-      100% {
-        background-position: 0 0;
-      }
-    }
-
-    #content {
-      background-color: black;
-      color: white;
-      font-family: 'Roboto', sans-serif;
-      padding-bottom: 100px;
-    }
-
-    #nav {
-      background-color: #0c0c0c;
-      position: relative;
-      display: flex;
-      align-items: center;
-    }
-
-    #imgBlock {
-      position: relative;
-      background-color: #0c0c0c;
-      text-align: center;
-      width: 100%
-    }
-
-    #logo {
-      width: 100px;
-      margin-left: auto;
-      margin-right: auto;
-    }
-
-    #banner {
-      width: 100%;
-    }
-
-    #bio {
-      font-size: 2vh;
-      padding: 100px;
-      background-color: #0c0c0c;
-    }
-
-    #ooter {
-      position: absolute;
-      margin: 100px;
-      right: 20%;
-    }
-
-    #footer {
-      font-size: 3vh;
-      width: 100%;
-      background-color: #0c0c0c;
-    }
-
-    a {
-      color: #EEE;
-    }
-
-    #projectBox {
-      background-color: #0c0c0c;
-      display: flex;
-      flex-wrap: wrap;
-      width: 100%;
-      padding-bottom: 100px;
-    }
-
-    .project-tile {
-      background-color: #1c1c1c;
-      display: flex;
-      flex-flow: column;
-      text-align: center;
-      align-items: center;
-      width: 30%;
-      margin-left: 1.5%;
-      margin-top: 5%;
-      margin-right: 1.5%;
-      border-radius: 25px;
-      box-shadow: 1px 1px 8px rgba(0, 0, 0, 0.25);
-    }
-
-    .project-img {
-      height: 15vw;
-    }
-
-    .project-info {
-      background-color: #171717;
-      border-bottom-left-radius: 25px;
-      border-bottom-right-radius: 25px;
-      font-size: 2vmax;
-      width: 100%;
-      flex: 1 1 auto;
-      align-items: center;
-    }
-
-    #socials {
-      height: 50vh;
-      display: flex;
-      flex-wrap: wrap;
-      align-items: center;
-      justify-content: center;
-    }
-
-    .socials {
-      display: flex;
-      flex: 1 1 auto;
-      flex-flow: column;
-      width: 5vw;
-      min-width: 125px;
-      margin: 25px;
-    }
-  </style>
-</head>
-
-<body id="content">
-  <div id="nav">
-    <img id="logo" src="PFP.png" alt="∞">
-  </div>
-  <div id="imgBlock">
-    <img id="banner" src="ISLogo.png">
-  </div>
-
-  <section id="socials">
-    <a target="_blank" href="https://github.com/bradleyjoe007"><img class="socials" src="ghlogo.png"></a>
-    <a target="_blank" href="https://stackoverflow.com/users/14214193/ipsm"><img class="socials" src="sologo.png"></a>
-    <a target="_blank" href="https://www.youtube.com/channel/UCn49tbS3vLvhok6Y9DrPLCQ"><img class="socials" src="ytlogo.png"></a>
-    <a target="_blank" href="https://twitter.com/IPSM_InPaSaMu"><img class="socials" src="twlogo.png"></a>
-    <a target="_blank" href="https://www.twitch.tv/inpasamu"><img class="socials" src="tchlogo.png"></a>
-    <a target="_blank" href="https://play.google.com/store/apps/dev?id=5348825362237735260"><img class="socials" src="gplogo.png"></a>
-    <a target="_blank" href="https://ipsm.itch.io"><img class="socials" src="itlogo.png" style="filter: invert(1);"></a>
-
-  </section>
-
-  <section id="projectBox">
-    <a target="_blank" href="https://www.freecodecamp.org/certification/InPaSaMu/data-visualization" class="glow-on-hover project-tile">
-      <img class="project-img" src="DV.png">
-      <div class="project-info">
-        <p>Data Visualisation</p>
-      </div>
-    </a>
-    <a target="_blank" href="https://www.freecodecamp.org/certification/InPaSaMu/front-end-development-libraries" class="glow-on-hover project-tile">
-      <img class="project-img" src="FEDL.png">
-      <div class="project-info">
-        <p>Front End Development Libraries</p>
-      </div>
-    </a>
-    <a target="_blank" href="https://www.freecodecamp.org/certification/InPaSaMu/javascript-algorithms-and-data-structures" class="glow-on-hover project-tile">
-      <img class="project-img" src="JADS.png">
-      <div class="project-info">
-        <p>JavaScript Algorithms and Data Structures</p>
-      </div>
-    </a>
-    <a target="_blank" href="CS50x.pdf" class="glow-on-hover project-tile">
-      <img class="project-img" src="cs50.png">
-      <div class="project-info">
-        <p>CS50x Certification</p>
-      </div>
-    </a>
-    <a target="_blank" href="https://play.google.com/store/apps/details?id=com.InfinityStudios.EnigmaSTS" class="glow-on-hover project-tile">
-      <img class="project-img" src="enigma.png">
-      <div class="project-info">
-        <p>Enigma: STS</p>
-      </div>
-    </a>
-    <a target="_blank" href="https://ipsm.itch.io/enigma-rtc" class="glow-on-hover project-tile">
-      <img class="project-img" src="https://img.itch.zone/aW1nLzU1OTc3NDcucG5n/315x250%23c/2%2BGgzp.png">
-      <div class="project-info">
-        <p>Enigma: RTC</p>
-      </div>
-    </a>
-    <a href="https://sketchfab.com/3d-models/infinity-slope-1-cc13f2f9c9884de6b81559380b6d1e8d?utm_medium=embed&utm_campaign=share-popup&utm_content=cc13f2f9c9884de6b81559380b6d1e8d" target="_blank" class="glow-on-hover project-tile">
-      <iframe class="project-img" src="https://sketchfab.com/models/cc13f2f9c9884de6b81559380b6d1e8d/embed"></iframe>
-      <div class="project-info">
-        <p>Infinity Slope 1</p>
-      </div>
-    </a>
-    <a href="https://www.freecodecamp.org/certification/InPaSaMu/responsive-web-design" target="_blank" class="glow-on-hover project-tile">
-      <img class="project-img" src="RWD.png">
-      <div class="project-info">
-        <p>Responsive Web Design</p>
-      </div>
-    </a>
-  </section>
-
-  <div id="footer">
-    <p id="ooter">
-      Email: bradleyjoe007@gmail.com<br>
-      Phone: +447587956344
-    </p>
-  </div>
-
-</body>
-
-
+    <footer>
+      <p>&copy; 2025 Bradley Joe Joseph. All rights reserved.</p>
+    </footer>
+    <script src="script.js"></script>
+  </body>
 </html>
