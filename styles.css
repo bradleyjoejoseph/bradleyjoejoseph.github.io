@@ -230,7 +230,7 @@ background: #28a745; /* Default green color */
 .skill-content h4 {
   margin: 10px 0 5px;
   font-size: 1rem;
-  color: #333;
+  color: #aaa;
 }
 
 .skill-content ul {
@@ -427,4 +427,12 @@ footer p {
   .box p {
     font-size: 0.8rem;
   }
+}
+
+/* Roblox Icon */
+.roblox-icon {
+  width: 24px;
+  height: 24px;
+  display: inline-block;
+  vertical-align: middle;
 }
