@@ -65,6 +65,7 @@ header {
   margin-top: 60px; /* Space for fixed navbar */
   background: linear-gradient(145deg, #2a2a2a, #1e1e1e); /* Dark gradient */
   border-bottom: 1px solid #333;
+  border-radius: 15px;
   margin-bottom: 20px;
   color: #ddd; /* Light gray text */
 }
@@ -135,7 +136,7 @@ section h2 {
   position: relative; /* Enable positioning for child elements like icons */
   background: linear-gradient(145deg, #2a2a2a, #1e1e1e); /* Dark gradient */
   border: 1px solid #333;
-  border-radius: 5px;
+  border-radius: 15px;
   padding: 15px;
   text-align: center;
   box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
@@ -275,6 +276,7 @@ background: #28a745; /* Default green color */
   background: linear-gradient(145deg, #2a2a2a, #1e1e1e); /* Dark gradient */
   border: 1px solid #333;
   padding: 20px;
+  border-radius: 15px;
   margin-bottom: 20px;
   box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
   transition: transform 0.3s, box-shadow 0.3s;
@@ -352,6 +354,7 @@ contact-links a:hover {
   padding: 20px 0;
   background: linear-gradient(145deg, #2a2a2a, #1e1e1e);  /* Dark gradient */
   border-top: 1px solid #333;
+  border-radius: 15px;
   color: #ddd; /* Light gray text */
 }
 
