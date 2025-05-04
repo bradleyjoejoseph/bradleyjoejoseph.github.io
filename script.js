@@ -84,7 +84,7 @@ document.addEventListener("DOMContentLoaded", () => {
     },
     {
       name: "HTML",
-      progress: 90,
+      progress: 85,
       icon: "devicon devicon-html5-plain",
       projects: [{ name: "Infinity Arcade", link: "#infinity-arcade" }],
       certifications: [
@@ -93,7 +93,7 @@ document.addEventListener("DOMContentLoaded", () => {
     },
     {
       name: "CSS",
-      progress: 75,
+      progress: 70,
       icon: "devicon devicon-css3-plain",
       projects: [],
       certifications: [
@@ -166,6 +166,15 @@ document.addEventListener("DOMContentLoaded", () => {
         { name: "Data Visualization", link: "#data-visualization" },
       ],
     },
+    {
+        name: "Lua",
+        progress: 40,
+        icon: "devicon devicon-lua-plain",
+        projects: [{ name: "The Enigma", link: "#the-enigma" }],
+        certifications: [
+          
+        ],
+      },
     {
       name: "C",
       progress: 25,
@@ -289,6 +298,21 @@ document.addEventListener("DOMContentLoaded", () => {
         </ul>
       `;
     }
+  });
+
+  const email = "bradleyjoe007@gmail.com";
+  const phone = "+447587956344";
+
+  document.getElementById("copy-email").addEventListener("click", () => {
+    navigator.clipboard.writeText(email).then(() => {
+      alert("Email copied to clipboard!");
+    });
+  });
+
+  document.getElementById("copy-phone").addEventListener("click", () => {
+    navigator.clipboard.writeText(phone).then(() => {
+      alert("Phone number copied to clipboard!");
+    });
   });
 });
 
