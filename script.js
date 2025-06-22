@@ -54,6 +54,7 @@ document.addEventListener("DOMContentLoaded", () => {
           link: "#front-end-libraries",
         },
         { name: "Data Visualization", link: "#data-visualization" },
+        { name: "Foundational C# with Microsoft", link: "#foundational-csharp-with-microsoft" },
       ],
     },
     {
@@ -123,7 +124,7 @@ document.addEventListener("DOMContentLoaded", () => {
       progress: 45,
       icon: "devicon devicon-csharp-plain",
       projects: [{ name: "Enigma: RTC", link: "#enigma-rtc" }],
-      certifications: [],
+      certifications: [{ name: "Foundational C# with Microsoft", link: "#foundational-csharp-with-microsoft" },],
     },
     {
       name: "3D Modelling",
