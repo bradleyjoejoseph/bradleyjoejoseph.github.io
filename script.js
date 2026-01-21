@@ -252,13 +252,18 @@ document.addEventListener("DOMContentLoaded", () => {
       skillTile.classList.add("expanded");
       skillContent.classList.add("expanded");
 
-      // Get the position of the tile before it expands
+      // Get the position of the tile relative to the skills grid
       const tileRect = skillTile.getBoundingClientRect();
+      const gridRect = skillsGrid.getBoundingClientRect();
       
-      // Position it absolutely at its current location
+      // Calculate position relative to the grid container
+      const topOffset = tileRect.top - gridRect.top;
+      const leftOffset = tileRect.left - gridRect.left;
+      
+      // Position it absolutely at its current location within the grid
       skillTile.style.position = "absolute";
-      skillTile.style.top = (tileRect.top + window.scrollY) + "px";
-      skillTile.style.left = (tileRect.left + window.scrollX) + "px";
+      skillTile.style.top = topOffset + "px";
+      skillTile.style.left = leftOffset + "px";
       skillTile.style.width = "300px";
 
       // Find the skill data
