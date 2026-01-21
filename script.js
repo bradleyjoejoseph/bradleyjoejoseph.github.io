@@ -34,29 +34,7 @@ document.querySelectorAll(".tab").forEach((tab) => {
 
 document.addEventListener("DOMContentLoaded", () => {
   const skills = [
-    {
-      name: "Coding",
-      progress: 45,
-      icon: "fa-solid fa-code",
-      projects: [
-        { name: "Enigma: RTC", link: "#enigma-rtc" },
-        { name: "Infinity Arcade", link: "#infinity-arcade" },
-      ],
-      certifications: [
-        { name: "CS50x Certification", link: "#cs50x-certification" },
-        {
-          name: "JavaScript Algorithms and Data Structures",
-          link: "#javascript-algorithms",
-        },
-        { name: "Responsive Web Design", link: "#responsive-web-design" },
-        {
-          name: "Front End Development Libraries",
-          link: "#front-end-libraries",
-        },
-        { name: "Data Visualization", link: "#data-visualization" },
-        { name: "Foundational C# with Microsoft", link: "#foundational-csharp-with-microsoft" },
-      ],
-    },
+    
     {
       name: "Flask",
       progress: 35,
@@ -108,6 +86,7 @@ document.addEventListener("DOMContentLoaded", () => {
       projects: [{ name: "Infinity Arcade", link: "#infinity-arcade" }],
       certifications: [
         { name: "CS50x Certification", link: "#cs50x-certification" },
+        { name: "Kaggle Python", link: "#kaggle-python" },
       ],
     },
     {
