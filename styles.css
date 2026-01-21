@@ -129,6 +129,7 @@ section h2 {
   grid-auto-rows: min-content; /* Dynamically adjust row height */
   grid-auto-flow: dense; /* Fill gaps dynamically */
   background: linear-gradient(145deg, #1a1a1a, #121212); /* Dark gradient */
+  position: relative;
 }
 
 /* Skill Tile */
@@ -154,8 +155,11 @@ section h2 {
 
 /* Expanded Skill Tile */
 .skill-tile.expanded {
-  grid-row: span 2; /* Make the expanded tile span two rows */
-  transition: grid-row 0.3s ease-in-out; /* Smooth transition for resizing */
+  position: absolute;
+  z-index: 100;
+  width: 300px;
+  box-shadow: 0 6px 16px rgba(0, 0, 0, 0.7);
+  transition: all 0.3s ease-in-out;
 }
 
 .skill-tile label {
@@ -517,6 +521,13 @@ footer p {
 
 .card-content a:active {
   transform: scale(1);
+}
+
+/* Highlight Box for Links */
+.highlight-box {
+  box-shadow: 0 0 0 3px #fff, 0 8px 16px rgba(0, 0, 0, 0.7) !important;
+  transform: scale(1.05);
+  transition: all 0.3s ease;
 }
 
 /* Responsive Design */

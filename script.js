@@ -233,16 +233,33 @@ document.addEventListener("DOMContentLoaded", () => {
       skillTile.classList.remove("expanded");
       skillContent.classList.remove("expanded");
       skillContent.innerHTML = ""; // Clear content when collapsed
+      skillTile.style.position = "";
+      skillTile.style.top = "";
+      skillTile.style.left = "";
+      skillTile.style.width = "";
     } else {
       // Collapse all other expanded skill tiles
       document.querySelectorAll(".skill-tile.expanded").forEach((tile) => {
         tile.classList.remove("expanded");
         tile.querySelector(".skill-content").classList.remove("expanded");
         tile.querySelector(".skill-content").innerHTML = ""; // Clear content
+        tile.style.position = "";
+        tile.style.top = "";
+        tile.style.left = "";
+        tile.style.width = "";
       });
 
       skillTile.classList.add("expanded");
       skillContent.classList.add("expanded");
+
+      // Get the position of the tile before it expands
+      const tileRect = skillTile.getBoundingClientRect();
+      
+      // Position it absolutely at its current location
+      skillTile.style.position = "absolute";
+      skillTile.style.top = (tileRect.top + window.scrollY) + "px";
+      skillTile.style.left = (tileRect.left + window.scrollX) + "px";
+      skillTile.style.width = "300px";
 
       // Find the skill data
       const skillData = skills.find(
@@ -277,6 +294,31 @@ document.addEventListener("DOMContentLoaded", () => {
           }
         </ul>
       `;
+
+      // Add click listeners to the links in the skill content
+      skillContent.querySelectorAll("a").forEach((link) => {
+        link.addEventListener("click", (e) => {
+          const href = link.getAttribute("href");
+          if (href && href.startsWith("#")) {
+            e.preventDefault();
+            const targetId = href.substring(1);
+            const targetElement = document.getElementById(targetId);
+            if (targetElement) {
+              // Add highlight class
+              targetElement.classList.add("highlight-box");
+              // Remove after 2 seconds
+              setTimeout(() => {
+                targetElement.classList.remove("highlight-box");
+              }, 2000);
+              // Scroll to the element
+              targetElement.scrollIntoView({
+                behavior: "smooth",
+                block: "center",
+              });
+            }
+          }
+        });
+      });
     }
   });
 
