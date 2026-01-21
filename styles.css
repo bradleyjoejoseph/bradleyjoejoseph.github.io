@@ -198,7 +198,6 @@ section h2 {
   transition: width 0.3s ease-in-out;
 background: #28a745; /* Default green color */
 }
-background: #28a745; /* Default green color */
 
 .progress[data-value="low"] {
   background: #ff1a1a; /* Red for low progress */
