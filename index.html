@@ -9,6 +9,12 @@
     />
     <link rel="icon" type="image/png" href="favicon.png" />
     <title>Bradley Joe Joseph</title>
+    
+    <!-- Google Fonts: Outfit -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    
     <link rel="stylesheet" href="styles.css" />
     <link
       href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css"
@@ -24,7 +30,7 @@
     />
   </head>
   <body>
-    <nav>
+    <nav id="navbar">
       <ul>
         <li><a href="#about">About</a></li>
         <li><a href="#skills">Skills</a></li>
@@ -34,259 +40,20 @@
       </ul>
     </nav>
 
-    <header>
-      <h1>Bradley Joe Joseph</h1>
-      <div class="contact-icons">
-        <a href="javascript:void(0)" title="Email" id="copy-email">
-          <i class="fas fa-envelope"></i>
-        </a>
-        <a href="javascript:void(0)" title="Phone" id="copy-phone">
-          <i class="fas fa-phone"></i>
-        </a>
-        
-        <a href="https://www.linkedin.com/in/bradley-joseph-730662235/" target="_blank" title="LinkedIn">
-          <i class="fab fa-linkedin"></i>
-        </a>
-        <a href="https://github.com/bradleyjoejoseph" target="_blank" title="GitHub">
-          <i class="fab fa-github"></i>
-        </a>
-        <a href="https://x.com/brdleyjoejoseph" target="_blank" title="Twitter">
-          <i class="fab fa-twitter"></i>
-        </a>
-        
-        <a href="https://www.youtube.com/channel/UCn49tbS3vLvhok6Y9DrPLCQ" target="_blank" title="YouTube">
-          <i class="fab fa-youtube"></i>
-        </a>
-        <a href="https://www.twitch.tv/bradleyjoejoseph" target="_blank" title="Twitch">
-          <i class="fab fa-twitch"></i>
-        </a>
-        <a href="https://instagram.com/bradleyjoejoseph" target="_blank" title="Instagram">
-          <i class="fab fa-instagram"></i>
-        </a>
-        <a href="https://www.tiktok.com/@brdleyjoejoseph" target="_blank" title="TikTok">
-          <i class="fab fa-tiktok"></i>
-        </a>
-      </div>
-    </header>
-
-    <main>
-      <section id="about">
-        <h2>About Me</h2>
-        <p>
-          I am Bradley, a web developer and programmer. I work with front-end and back-end technologies. I know HTML, CSS, JavaScript, Python, SQL, Flask, React, and 3D modeling. I create websites, applications, and digital projects.
+    <header id="about" class="hero">
+      <div class="hero-content">
+        <h1>Bradley Joe Joseph</h1>
+        <p class="tagline">Web Developer, Programmer, and 3D Artist</p>
+        <p class="hero-description">
+          I work with both front-end and back-end technologies. I know HTML, CSS, JavaScript, Python, SQL, Flask, React, and 3D modeling. I create immersive websites, applications, and digital projects.
         </p>
-      </section>
-
-      <section id="skills">
-        <h2>Skills</h2>
-        <div class="skills-grid">
-          
-          
-        </div>
-      </section>
-
-      <section id="projects">
-        <h2>Projects</h2>
-        <div class="projects-grid">
-          <div class="card" id="enigma-rtc">
-            <div class="card-image">
-              <img src="enigmartc.png" alt="Enigma: RTC">
-            </div>
-            <div class="card-content">
-              <h3>Enigma: RTC</h3>
-              <p>A game hosted on Itch.io.</p>
-              <div class="card-icons">
-                <i class="fas fa-code"></i>
-                <i class="devicon-csharp-plain"></i>
-              </div>
-              <a href="https://ipsm.itch.io/enigma-rtc" target="_blank">View Project</a>
-            </div>
-          </div>
-          <div class="card" id="infinity-slope-1">
-            <div class="card-image">
-              <img src="slope.png" alt="Infinity Slope 1">
-            </div>
-            <div class="card-content">
-              <h3>Infinity Slope 1</h3>
-              <p>A 3D model hosted on Sketchfab.</p>
-              <div class="card-icons">
-                <i class="fas fa-cube"></i>
-                <i class="devicon-blender-original"></i>
-              </div>
-              <a href="https://sketchfab.com/3d-models/infinity-slope-1-cc13f2f9c9884de6b81559380b6d1e8d" target="_blank">View Project</a>
-            </div>
-          </div>
-          <div class="card" id="iphone-8">
-            <div class="card-image">
-              <img src="iphone8.png" alt="iPhone 8">
-            </div>
-            <div class="card-content">
-              <h3>iPhone 8</h3>
-              <p>A 3D model of the iPhone 8 hosted on Sketchfab.</p>
-              <div class="card-icons">
-                <i class="fas fa-cube"></i>
-                <i class="devicon-blender-original"></i>
-              </div>
-              <a href="https://sketchfab.com/3d-models/iphone-8-fe7abee5d3f74797ae1615d394cc0485" target="_blank">View Project</a>
-            </div>
-          </div>
-          <div class="card" id="infinity-arcade">
-            <div class="card-image">
-              <img src="cs50.png" alt="Infinity Arcade">
-            </div>
-            <div class="card-content">
-              <h3>Infinity Arcade</h3>
-              <p>CS50x Final Project: Web Casino Game App.</p>
-              <div class="card-icons">
-                <i class="fas fa-code"></i>
-                <i class="fab fa-html5"></i>
-                <i class="fab fa-python"></i>
-                <i class="devicon-flask-original"></i>
-                <i class="fas fa-database"></i>
-              </div>
-              <a href="https://github.com/bradleyjoejoseph/Infinity-Arcade" target="_blank">View Project</a>
-            </div>
-          </div>
-          <div class="card" id="the-enigma">
-            <div class="card-image">
-              <img src="enigmaroblox.png" alt="The Enigma">
-            </div>
-            <div class="card-content">
-              <h3>The Enigma</h3>
-              <p>Game made in Lua on Roblox</p>
-              <div class="card-icons">
-                <i class="fas fa-code"></i>
-                <i class="devicon-lua-plain"></i>
-              </div>
-              <a href="https://www.roblox.com/games/5273881225/The-Enigma" target="_blank">View Project</a>
-            </div>
-          </div>
-        </div>
-      </section>
-
-      <section id="certifications">
-        <h2>Certifications</h2>
-        <div class="certifications-grid">
-          <div class="card" id="cs50x-certification">
-            <div class="card-image">
-              <img src="cs50.png" alt="CS50x Certification">
-            </div>
-            <div class="card-content">
-              <h3>CS50x Certification</h3>
-              <p>Certification from Harvard's CS50x course.</p>
-              <div class="card-icons">
-                <i class="fas fa-code"></i>
-                <i class="fab fa-python"></i>
-                <i class="fas fa-database"></i>
-                <i class="devicon-django-plain"></i>
-                <i class="devicon-flask-original"></i>
-                <i class="devicon-c-plain"></i>
-              </div>
-              <a href="CS50x.pdf" target="_blank">View Certification</a>
-            </div>
-          </div>
-          <div class="card" id="javascript-algorithms">
-            <div class="card-image">
-              <img src="JADS.png" alt="JavaScript Algorithms">
-            </div>
-            <div class="card-content">
-              <h3>JavaScript Algorithms and Data Structures</h3>
-              <p>Certification from FreeCodeCamp.</p>
-              <div class="card-icons">
-                <i class="fas fa-code"></i>
-                <i class="fab fa-js"></i>
-              </div>
-              <a href="https://www.freecodecamp.org/certification/bradleyjoejoseph/javascript-algorithms-and-data-structures" target="_blank">View Certification</a>
-            </div>
-          </div>
-          <div class="card" id="responsive-web-design">
-            <div class="card-image">
-              <img src="RWD.png" alt="Responsive Web Design">
-            </div>
-            <div class="card-content">
-              <h3>Responsive Web Design</h3>
-              <p>Certification from FreeCodeCamp.</p>
-              <div class="card-icons">
-                <i class="fas fa-code"></i>
-                <i class="fab fa-html5"></i>
-                <i class="fab fa-css3-alt"></i>
-              </div>
-              <a href="https://www.freecodecamp.org/certification/bradleyjoejoseph/responsive-web-design" target="_blank">View Certification</a>
-            </div>
-          </div>
-          <div class="card" id="front-end-libraries">
-            <div class="card-image">
-              <img src="FEDL.png" alt="Front End Development Libraries">
-            </div>
-            <div class="card-content">
-              <h3>Front End Development Libraries</h3>
-              <p>Certification from FreeCodeCamp.</p>
-              <div class="card-icons">
-                <i class="fas fa-code"></i>
-                <i class="fab fa-react"></i>
-                <i class="fab fa-js"></i>
-              </div>
-              <a href="https://www.freecodecamp.org/certification/bradleyjoejoseph/front-end-development-libraries" target="_blank">View Certification</a>
-            </div>
-          </div>
-          <div class="card" id="data-visualization">
-            <div class="card-image">
-              <img src="DV.png" alt="Data Visualization">
-            </div>
-            <div class="card-content">
-              <h3>Data Visualization</h3>
-              <p>Certification from FreeCodeCamp.</p>
-              <div class="card-icons">
-                <i class="fas fa-code"></i>
-                <i class="fas fa-chart-pie"></i>
-                <i class="devicon-d3js-plain"></i>
-                <i class="fab fa-js"></i>
-              </div>
-              <a href="https://www.freecodecamp.org/certification/bradleyjoejoseph/data-visualization" target="_blank">View Certification</a>
-            </div>
-          </div>
-          <div class="card" id="foundational-csharp">
-            <div class="card-image">
-              <img src="FCM.png" alt="Foundational C#">
-            </div>
-            <div class="card-content">
-              <h3>Foundational C# with Microsoft</h3>
-              <p>Certification from FreeCodeCamp & Microsoft.</p>
-              <div class="card-icons">
-                <i class="fas fa-code"></i>
-                <i class="devicon-csharp-plain"></i>
-              </div>
-              <a href="https://www.freecodecamp.org/certification/bradleyjoejoseph/foundational-c-sharp-with-microsoft" target="_blank">View Certification</a>
-            </div>
-          </div>
-          <div class="card" id="kaggle-python">
-            <div class="card-image">
-              <img src="KP.png" alt="Kaggle Python Certification">
-            </div>
-            <div class="card-content">
-              <h3>Kaggle Python Certification</h3>
-              <p>Certification from Kaggle.</p>
-              <div class="card-icons">
-                <i class="fas fa-code"></i>
-                <i class="fab fa-python"></i>
-              </div>
-              <a href="https://www.kaggle.com/learn/certification/bradleyjoseph/python" target="_blank">View Certification</a>
-            </div>
-          </div>
-          
-        </div>
-      </section>
-
-      <section id="contact">
-        <h2>Contact</h2>
         <div class="contact-icons">
-          <a href="javascript:void(0)" title="Email" id="copy-email">
-          <i class="fas fa-envelope"></i>
-        </a>
-        <a href="javascript:void(0)" title="Phone" id="copy-phone">
-          <i class="fas fa-phone"></i>
-        </a>
-          
+          <a href="javascript:void(0)" title="Email" class="copy-email">
+            <i class="fas fa-envelope"></i>
+          </a>
+          <a href="javascript:void(0)" title="Phone" class="copy-phone">
+            <i class="fas fa-phone"></i>
+          </a>
           <a href="https://www.linkedin.com/in/bradley-joseph-730662235/" target="_blank" title="LinkedIn">
             <i class="fab fa-linkedin"></i>
           </a>
@@ -296,7 +63,62 @@
           <a href="https://x.com/brdleyjoejoseph" target="_blank" title="Twitter">
             <i class="fab fa-twitter"></i>
           </a>
-          
+          <a href="https://www.youtube.com/channel/UCn49tbS3vLvhok6Y9DrPLCQ" target="_blank" title="YouTube">
+            <i class="fab fa-youtube"></i>
+          </a>
+          <a href="https://www.twitch.tv/bradleyjoejoseph" target="_blank" title="Twitch">
+            <i class="fab fa-twitch"></i>
+          </a>
+          <a href="https://instagram.com/bradleyjoejoseph" target="_blank" title="Instagram">
+            <i class="fab fa-instagram"></i>
+          </a>
+          <a href="https://www.tiktok.com/@brdleyjoejoseph" target="_blank" title="TikTok">
+            <i class="fab fa-tiktok"></i>
+          </a>
+        </div>
+      </div>
+    </header>
+
+    <main>
+      <section id="skills">
+        <h2>Skills</h2>
+        <div class="skills-grid" id="skills-container">
+          <!-- Dynamically populated by JS -->
+        </div>
+      </section>
+
+      <section id="projects">
+        <h2>Projects</h2>
+        <div class="projects-grid" id="projects-container">
+          <!-- Dynamically populated by JS -->
+        </div>
+      </section>
+
+      <section id="certifications">
+        <h2>Certifications</h2>
+        <div class="certifications-grid" id="certifications-container">
+          <!-- Dynamically populated by JS -->
+        </div>
+      </section>
+
+      <section id="contact">
+        <h2>Contact</h2>
+        <div class="contact-icons">
+          <a href="javascript:void(0)" title="Email" class="copy-email">
+            <i class="fas fa-envelope"></i>
+          </a>
+          <a href="javascript:void(0)" title="Phone" class="copy-phone">
+            <i class="fas fa-phone"></i>
+          </a>
+          <a href="https://www.linkedin.com/in/bradley-joseph-730662235/" target="_blank" title="LinkedIn">
+            <i class="fab fa-linkedin"></i>
+          </a>
+          <a href="https://github.com/bradleyjoejoseph" target="_blank" title="GitHub">
+            <i class="fab fa-github"></i>
+          </a>
+          <a href="https://x.com/brdleyjoejoseph" target="_blank" title="Twitter">
+            <i class="fab fa-twitter"></i>
+          </a>
           <a href="https://www.youtube.com/channel/UCn49tbS3vLvhok6Y9DrPLCQ" target="_blank" title="YouTube">
             <i class="fab fa-youtube"></i>
           </a>
@@ -316,6 +138,17 @@
     <footer>
       <p>&copy; 2026 Bradley Joe Joseph. All rights reserved.</p>
     </footer>
+
+    <!-- Overlay Modal for Projects/Certificates -->
+    <div id="modal-overlay" class="modal-overlay">
+      <div class="modal-content glass-effect">
+        <button id="modal-close" class="modal-close"><i class="fas fa-times"></i></button>
+        <div id="modal-body">
+          <!-- Dynamically populated by JS -->
+        </div>
+      </div>
+    </div>
+
     <script src="script.js"></script>
   </body>
 </html>
