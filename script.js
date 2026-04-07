@@ -355,52 +355,10 @@ document.addEventListener("DOMContentLoaded", () => {
       if (!skillTile) return;
 
       const skillName = skillTile.dataset.skill;
-      const skillContent = skillTile.querySelector(".skill-content");
-
-      if (skillTile.classList.contains("expanded")) {
-        skillTile.classList.remove("expanded");
-        skillContent.innerHTML = "";
-      } else {
-        document.querySelectorAll(".skill-tile.expanded").forEach((tile) => {
-          tile.classList.remove("expanded");
-          tile.querySelector(".skill-content").innerHTML = "";
-        });
-
-        skillTile.classList.add("expanded");
-
-        const skillData = skills.find(s => s.name.toLowerCase() === skillName);
-
-        skillContent.innerHTML = `
-          <h4>Projects</h4>
-          <ul>
-            ${skillData.projects.length > 0
-                ? skillData.projects.map(p => `<li><a href="${p.link}">${p.name}</a></li>`).join("")
-                : "<li>No projects available</li>"}
-          </ul>
-          <h4>Certifications</h4>
-          <ul>
-            ${skillData.certifications.length > 0
-                ? skillData.certifications.map(c => `<li><a href="${c.link}">${c.name}</a></li>`).join("")
-                : "<li>No certifications available</li>"}
-          </ul>
-        `;
-
-        // Handle link clicks to flash highlight elements
-        skillContent.querySelectorAll("a").forEach((link) => {
-          link.addEventListener("click", (e) => {
-            const href = link.getAttribute("href");
-            if (href && href.startsWith("#")) {
-              e.preventDefault();
-              const targetId = href.substring(1);
-              const targetElement = document.getElementById(targetId);
-              if (targetElement) {
-                targetElement.classList.add("highlight-box");
-                setTimeout(() => targetElement.classList.remove("highlight-box"), 2000);
-                targetElement.scrollIntoView({ behavior: "smooth", block: "center" });
-              }
-            }
-          });
-        });
+      const skillData = skills.find(s => s.name.toLowerCase() === skillName);
+      
+      if (skillData) {
+        openSkillModal(skillData);
       }
     });
   }
@@ -426,6 +384,46 @@ document.addEventListener("DOMContentLoaded", () => {
 const modalOverlay = document.getElementById("modal-overlay");
 const modalBody = document.getElementById("modal-body");
 const modalClose = document.getElementById("modal-close");
+
+function openSkillModal(skillData) {
+  let projectsList = skillData.projects.length > 0
+    ? skillData.projects.map(p => `<li><a href="${p.link}" class="modal-link" data-target="${p.link.substring(1)}">${p.name}</a></li>`).join("")
+    : "<li>No projects associated yet.</li>";
+
+  let certsList = skillData.certifications.length > 0
+    ? skillData.certifications.map(c => `<li><a href="${c.link}" class="modal-link" data-target="${c.link.substring(1)}">${c.name}</a></li>`).join("")
+    : "<li>No certifications associated yet.</li>";
+
+  modalBody.innerHTML = `
+    <h2><i class="${skillData.icon}"></i> ${skillData.name}</h2>
+    
+    <div class="modal-description" style="margin-top: 2rem;">
+      <h3>Projects Using ${skillData.name}</h3>
+      <ul style="padding-left: 1.5rem; margin-bottom: 2rem;">${projectsList}</ul>
+      
+      <h3>Certifications Involving ${skillData.name}</h3>
+      <ul style="padding-left: 1.5rem;">${certsList}</ul>
+    </div>
+  `;
+  
+  // Link highlighting logic for when inside a modal
+  modalBody.querySelectorAll('.modal-link').forEach(link => {
+    link.addEventListener('click', (e) => {
+      e.preventDefault();
+      closeModal(); // Close the modal to see the highlighted grid item
+      const targetId = link.getAttribute('data-target');
+      const targetElement = document.getElementById(targetId);
+      if (targetElement) {
+        targetElement.classList.add("highlight-box");
+        setTimeout(() => targetElement.classList.remove("highlight-box"), 2000);
+        targetElement.scrollIntoView({ behavior: "smooth", block: "center" });
+      }
+    });
+  });
+
+  modalOverlay.classList.add("active");
+  document.body.style.overflow = "hidden";
+}
 
 function openModal(data) {
   const techBadgesHTML = data.techStack.map(tech => `

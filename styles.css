@@ -2,7 +2,7 @@
   --bg-color: #000000;
   --surface-color: rgba(255, 255, 255, 0.04);
   --surface-hover: rgba(255, 255, 255, 0.08);
-  --border-color: rgba(255, 255, 255, 0.1);
+  --border-color: rgba(255, 255, 255, 0.15);
   --accent-color: #3b82f6; /* Electric blue used sparingly */
   --accent-gradient: linear-gradient(135deg, #3b82f6, #8b5cf6); /* Keeping just in case, but unused on main text */
   --text-primary: #ffffff;
@@ -208,51 +208,7 @@ section h2 {
   transition: width 1s ease-in-out;
 }
 
-/* Expanded Skill State */
-.skill-content {
-  display: none;
-  margin-top: 1rem;
-  text-align: left;
-  border-top: 1px solid var(--border-color);
-  padding-top: 1rem;
-}
 
-.skill-tile.expanded {
-  grid-row: span 2;
-  background: var(--surface-hover);
-}
-
-.skill-tile.expanded .skill-content {
-  display: block;
-}
-
-.skill-content h4 {
-  color: var(--text-primary);
-  margin-bottom: 0.5rem;
-  font-size: 0.9rem;
-  text-transform: uppercase;
-  letter-spacing: 1px;
-}
-
-.skill-content ul {
-  list-style: none;
-  margin-bottom: 1rem;
-}
-
-.skill-content ul li {
-  margin-bottom: 0.5rem;
-}
-
-.skill-content a {
-  color: var(--text-secondary);
-  text-decoration: none;
-  font-size: 0.9rem;
-  transition: var(--transition);
-}
-
-.skill-content a:hover {
-  color: var(--accent-color);
-}
 
 /* Cards (Projects & Certifications) */
 .card {
