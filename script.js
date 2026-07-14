@@ -3,8 +3,8 @@ const projectsData = [
     id: "enigma-rtc",
     name: "Enigma: RTC",
     image: "enigmartc.png",
-    shortDescription: "A game hosted on Itch.io.",
-    detailedDescription: "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vivamus lacinia odio vitae vestibulum vestibulum. Cras venenatis euismod malesuada. Praesent pretium arcu eget nisl consectetur, id volutpat quam sagittis.",
+    shortDescription: "A multiplayer online game hosted on Itch.io.",
+    detailedDescription: "Designed and developed a multiplayer online role-playing and tactical combat game using Unity and C#. Built modular real-time networking protocols, structured event-driven gameplay loops, and implemented complex state sync logic between client and server to ensure low-latency interactions.",
     techStack: [
       { name: "C#", icon: "devicon-csharp-plain" },
     ],
@@ -14,8 +14,8 @@ const projectsData = [
     id: "infinity-slope-1",
     name: "Infinity Slope 1",
     image: "slope.png",
-    shortDescription: "A 3D model hosted on Sketchfab.",
-    detailedDescription: "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Integer nec odio. Praesent libero. Sed cursus ante dapibus diam. Sed nisi. Nulla quis sem at nibh elementum imperdiet.",
+    shortDescription: "A 3D endless runner model hosted on Sketchfab.",
+    detailedDescription: "Sculpted, modeled, and optimized a 3D endless runner track and assets in Blender. Focused on clean topology, light baking, and polygon budget optimization to ensure smooth, high-fps integration with Unity's rigid physics engine.",
     techStack: [
       { name: "Blender", icon: "devicon-blender-original" },
     ],
@@ -25,8 +25,8 @@ const projectsData = [
     id: "iphone-8",
     name: "iPhone 8",
     image: "iphone8.png",
-    shortDescription: "A 3D model of the iPhone 8 hosted on Sketchfab.",
-    detailedDescription: "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Duis sagittis ipsum. Praesent mauris. Fusce nec tellus sed augue semper porta. Mauris massa.",
+    shortDescription: "A high-fidelity 3D model of the iPhone 8 on Sketchfab.",
+    detailedDescription: "Designed a photorealistic 3D model of an iPhone 8 in Blender. Built using precise physical dimensions, clean edge-flow for subdivision surface modeling, custom PBR materials (metallic, glass reflections), and studio lighting setups for presentation rendering.",
     techStack: [
       { name: "Blender", icon: "devicon-blender-original" },
     ],
@@ -37,7 +37,7 @@ const projectsData = [
     name: "Infinity Arcade",
     image: "cs50.png",
     shortDescription: "CS50x Final Project: Web Casino Game App.",
-    detailedDescription: "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nulla facilisi. Proin volutpat, nisl non consectetur bibendum, urna lectus facilisis sapien, id eleifend odio felis at metus.",
+    detailedDescription: "Architected and built a full-stack casino web application featuring Blackjack, Slots, and Video Poker. Developed using Python, Flask, and SQLite on the backend with a native HTML5/CSS3/JavaScript responsive frontend. Features secure user session management, password hashing (werkzeug), and persistent database balance updates.",
     techStack: [
       { name: "HTML5", icon: "devicon-html5-plain" },
       { name: "Python", icon: "devicon-python-plain" },
@@ -50,8 +50,8 @@ const projectsData = [
     id: "the-enigma",
     name: "The Enigma",
     image: "enigmaroblox.png",
-    shortDescription: "Game made in Lua on Roblox",
-    detailedDescription: "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vestibulum tristique purus sed massa finibus, eget facilisis odio ultrices. Nam consectetur elit et elit iaculis, eget vestibulum neque bibendum.",
+    shortDescription: "Multiplayer game made in Lua on Roblox.",
+    detailedDescription: "Designed and developed a highly successful multiplayer online game on Roblox, writing over 90% of the Lua scripting. Implemented client-server networking optimizations to decrease payload sizes, resulting in low-latency multiplayer replication. Scaled to over 5,500 total visits and 1,000+ monthly active users (MAUs), earning the Roblox 'Bombastic Crown of O's' creator reward.",
     techStack: [
       { name: "Lua", icon: "devicon-lua-plain" },
     ],
@@ -64,8 +64,8 @@ const certificationsData = [
     id: "cs50x-certification",
     name: "CS50x Certification",
     image: "cs50.png",
-    shortDescription: "Certification from Harvard's CS50x course.",
-    detailedDescription: "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nullam in odio vel velit rutrum fermentum nec eget libero. Sed euismod, quam hendrerit vestibulum vulputate, lectus quam rhoncus nunc, nec bibendum nulla.",
+    shortDescription: "Harvard University's Introduction to Computer Science.",
+    detailedDescription: "Mastered core computer science concepts including memory allocation, runtime complexity (Big O), data structures (arrays, linked lists, binary search trees, hash tables), SQL, Python, Flask, web development, and low-level programming in C.",
     techStack: [
       { name: "Python", icon: "devicon-python-plain" },
       { name: "SQL", icon: "fas fa-database" },
@@ -79,8 +79,8 @@ const certificationsData = [
     id: "javascript-algorithms",
     name: "JavaScript Algorithms and Data Structures",
     image: "JADS.png",
-    shortDescription: "Certification from FreeCodeCamp.",
-    detailedDescription: "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec commodo, sem ullamcorper tempor accumsan, dolor erat interdum augue, id gravida leo tellus feugiat nisl. Nam et tempus libero.",
+    shortDescription: "freeCodeCamp certification in JavaScript programming.",
+    detailedDescription: "Covered basic JavaScript, ES6, Regular Expressions, debugging, data structures, Object-Oriented Programming, Functional Programming, and intermediate algorithm scripting challenges.",
     techStack: [
       { name: "JavaScript", icon: "devicon-javascript-plain" },
     ],
@@ -90,8 +90,8 @@ const certificationsData = [
     id: "responsive-web-design",
     name: "Responsive Web Design",
     image: "RWD.png",
-    shortDescription: "Certification from FreeCodeCamp.",
-    detailedDescription: "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Maecenas ac mi justo. Vivamus et eleifend urna. Cras suscipit pulvinar sapien nec cursus. Etiam volutpat feugiat quam.",
+    shortDescription: "freeCodeCamp certification in frontend responsive web design.",
+    detailedDescription: "Mastered responsive layouts using CSS Flexbox, Grid, custom animations, media queries, accessibility (a11y) standards, and HTML5 semantic structure.",
     techStack: [
       { name: "HTML5", icon: "devicon-html5-plain" },
       { name: "CSS3", icon: "devicon-css3-plain" },
@@ -102,8 +102,8 @@ const certificationsData = [
     id: "front-end-libraries",
     name: "Front End Development Libraries",
     image: "FEDL.png",
-    shortDescription: "Certification from FreeCodeCamp.",
-    detailedDescription: "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Etiam nec sagittis leo. Nunc eleifend est non augue gravida, non dictum risus viverra. Suspendisse dapibus urna scelerisque dui convallis tempor.",
+    shortDescription: "freeCodeCamp certification covering modern UI libraries.",
+    detailedDescription: "Learned to build responsive single-page applications using React (state management, component lifecycles), Redux, Sass, jQuery, and Bootstrap.",
     techStack: [
       { name: "React", icon: "devicon-react-original" },
       { name: "JavaScript", icon: "devicon-javascript-plain" },
@@ -114,8 +114,8 @@ const certificationsData = [
     id: "data-visualization",
     name: "Data Visualization",
     image: "DV.png",
-    shortDescription: "Certification from FreeCodeCamp.",
-    detailedDescription: "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nam eu metus elementum, pulvinar urna ultrices, vehicula odio. Vestibulum in augue egestas, viverra lectus et, facilisis est. Ut sodales.",
+    shortDescription: "freeCodeCamp certification covering D3.js data charts.",
+    detailedDescription: "Learned to parse and visualize complex data streams using D3.js, binding JSON data to SVG elements, managing scale factors, and implementing interactive chart animations.",
     techStack: [
       { name: "Data Viz", icon: "fas fa-chart-pie" },
       { name: "D3.js", icon: "devicon-d3js-plain" },
@@ -127,8 +127,8 @@ const certificationsData = [
     id: "foundational-csharp",
     name: "Foundational C# with Microsoft",
     image: "FCM.png",
-    shortDescription: "Certification from FreeCodeCamp & Microsoft.",
-    detailedDescription: "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip.",
+    shortDescription: "Microsoft & freeCodeCamp certification in C# programming.",
+    detailedDescription: "Covered foundational C# concepts, type casting, array handling, file I/O operations, writing methods, string parsing, logic branch optimization, and exception handling.",
     techStack: [
       { name: "C#", icon: "devicon-csharp-plain" },
     ],
@@ -138,8 +138,8 @@ const certificationsData = [
     id: "kaggle-python",
     name: "Kaggle Python Certification",
     image: "KP.png",
-    shortDescription: "Certification from Kaggle.",
-    detailedDescription: "Lorem ipsum dolor sit amet, consectetur adipiscing elit. In vel elit eu sem rhoncus tempor vel sit amet magna. Curabitur sed dolor euismod, accumsan tortor eget, tincidunt erat.",
+    shortDescription: "Kaggle Python coding and data science libraries.",
+    detailedDescription: "Focused on advanced Python syntax, object scopes, dictionary and tuple structures, working with external libraries, and preparing data using pythonic expressions.",
     techStack: [
       { name: "Python", icon: "devicon-python-plain" },
     ],
@@ -364,7 +364,7 @@ document.addEventListener("DOMContentLoaded", () => {
   }
 
   // Contact Info Copy
-  const email = "bradleyjoe007@gmail.com";
+  const email = "bradleyjoejoseph@gmail.com";
   const phone = "+447587956344";
 
   document.querySelectorAll(".copy-email").forEach(btn => {
