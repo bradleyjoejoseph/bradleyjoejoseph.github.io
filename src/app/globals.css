@@ -1,0 +1,130 @@
+:root {
+  /* Midnight / Maroon / Silver Theme */
+  --bg-primary: #0a0f1c; /* Deep midnight blue, not pitch black */
+  --bg-surface: rgba(255, 255, 255, 0.03);
+  --bg-surface-hover: rgba(128, 0, 0, 0.1); 
+  
+  --border-color: rgba(255, 255, 255, 0.08);
+  --border-hover: rgba(128, 0, 0, 0.4);
+  
+  --text-primary: #e2e8f0; /* Soft white/silver */
+  --text-secondary: #94a3b8; /* Slate */
+  --text-tertiary: #64748b;
+  
+  --accent-maroon: #800000;
+  --accent-burgundy: #4a0404;
+  --accent-silver: #cbd5e1;
+  --accent-highlight: #f87171;
+  
+  --accent-gradient: linear-gradient(135deg, #e2e8f0, #94a3b8);
+  --maroon-gradient: linear-gradient(135deg, #991b1b, #450a0a);
+  
+  --transition-fast: 0.2s cubic-bezier(0.4, 0, 0.2, 1);
+  --transition-slow: 0.6s cubic-bezier(0.16, 1, 0.3, 1);
+}
+
+* {
+  box-sizing: border-box;
+  padding: 0;
+  margin: 0;
+}
+
+html, body {
+  max-width: 100vw;
+  overflow-x: hidden;
+  background-color: var(--bg-primary);
+  color: var(--text-primary);
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+body {
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  position: relative;
+  /* Starry night scrolling background */
+  background-image: 
+    radial-gradient(1px 1px at 25px 5px, rgba(255,255,255,0.8), rgba(0,0,0,0)),
+    radial-gradient(1px 1px at 50px 25px, rgba(255,255,255,0.6), rgba(0,0,0,0)),
+    radial-gradient(1px 1px at 125px 20px, rgba(255,255,255,0.4), rgba(0,0,0,0)),
+    radial-gradient(1.5px 1.5px at 50px 75px, rgba(255,255,255,0.9), rgba(0,0,0,0)),
+    radial-gradient(2px 2px at 15px 125px, rgba(255,255,255,0.3), rgba(0,0,0,0)),
+    radial-gradient(1px 1px at 110px 80px, rgba(255,255,255,0.7), rgba(0,0,0,0)),
+    radial-gradient(1px 1px at 180px 140px, rgba(255,255,255,0.5), rgba(0,0,0,0)),
+    radial-gradient(1.5px 1.5px at 140px 180px, rgba(255,255,255,0.8), rgba(0,0,0,0)),
+    radial-gradient(1px 1px at 80px 160px, rgba(255,255,255,0.6), rgba(0,0,0,0));
+  background-size: 200px 200px;
+  background-attachment: scroll;
+}
+
+/* Background Ambient Glow */
+body::before {
+  content: '';
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100vw;
+  height: 100vh;
+  background-image: url("data:image/svg+xml,%3Csvg viewBox='0 0 200 200' xmlns='http://www.w3.org/2000/svg'%3E%3Cfilter id='noiseFilter'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.8' numOctaves='3' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23noiseFilter)'/%3E%3C/svg%3E");
+  opacity: 0.05;
+  z-index: -2;
+  pointer-events: none;
+}
+
+.ambientGlow1 {
+  position: fixed;
+  top: -30%;
+  left: -10%;
+  width: 80vw;
+  height: 80vh;
+  background: radial-gradient(circle, rgba(128, 0, 0, 0.08) 0%, rgba(0,0,0,0) 60%);
+  z-index: -1;
+  animation: pulseGlow 15s ease-in-out infinite alternate;
+  pointer-events: none;
+}
+
+.ambientGlow2 {
+  position: fixed;
+  bottom: -30%;
+  right: -10%;
+  width: 80vw;
+  height: 80vh;
+  background: radial-gradient(circle, rgba(148, 163, 184, 0.05) 0%, rgba(0,0,0,0) 60%);
+  z-index: -1;
+  animation: pulseGlow 12s ease-in-out infinite alternate-reverse;
+  pointer-events: none;
+}
+
+@keyframes pulseGlow {
+  0% { transform: scale(1); opacity: 0.6; }
+  100% { transform: scale(1.1); opacity: 1; }
+}
+
+a {
+  color: inherit;
+  text-decoration: none;
+}
+
+ul {
+  list-style: none;
+}
+
+::-webkit-scrollbar {
+  width: 8px;
+}
+::-webkit-scrollbar-track {
+  background: var(--bg-primary);
+}
+::-webkit-scrollbar-thumb {
+  background: rgba(255, 255, 255, 0.1);
+  border-radius: 4px;
+}
+::-webkit-scrollbar-thumb:hover {
+  background: var(--accent-maroon);
+}
+
+::selection {
+  background: var(--accent-maroon);
+  color: var(--text-primary);
+}
