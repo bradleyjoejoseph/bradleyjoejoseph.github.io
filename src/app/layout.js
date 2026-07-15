@@ -12,6 +12,9 @@ export default function RootLayout({ children }) {
   return (
     <html lang="en" className={inter.className}>
       <body>
+        <div className="starLayer starLayer1"></div>
+        <div className="starLayer starLayer2"></div>
+        <div className="starLayer starLayer3"></div>
         <div className="ambientGlow1"></div>
         <div className="ambientGlow2"></div>
         {children}

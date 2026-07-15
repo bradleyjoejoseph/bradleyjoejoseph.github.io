@@ -43,19 +43,61 @@ body {
   display: flex;
   flex-direction: column;
   position: relative;
-  /* Starry night scrolling background */
+}
+
+/* Animated Star Background Layers */
+.starLayer {
+  position: fixed;
+  top: 0; left: 0;
+  width: 200vw; height: 200vh;
+  pointer-events: none;
+  z-index: 0;
+}
+
+.starLayer1 {
   background-image: 
-    radial-gradient(1px 1px at 25px 5px, rgba(255,255,255,0.8), rgba(0,0,0,0)),
-    radial-gradient(1px 1px at 50px 25px, rgba(255,255,255,0.6), rgba(0,0,0,0)),
-    radial-gradient(1px 1px at 125px 20px, rgba(255,255,255,0.4), rgba(0,0,0,0)),
-    radial-gradient(1.5px 1.5px at 50px 75px, rgba(255,255,255,0.9), rgba(0,0,0,0)),
-    radial-gradient(2px 2px at 15px 125px, rgba(255,255,255,0.3), rgba(0,0,0,0)),
-    radial-gradient(1px 1px at 110px 80px, rgba(255,255,255,0.7), rgba(0,0,0,0)),
-    radial-gradient(1px 1px at 180px 140px, rgba(255,255,255,0.5), rgba(0,0,0,0)),
-    radial-gradient(1.5px 1.5px at 140px 180px, rgba(255,255,255,0.8), rgba(0,0,0,0)),
-    radial-gradient(1px 1px at 80px 160px, rgba(255,255,255,0.6), rgba(0,0,0,0));
-  background-size: 200px 200px;
-  background-attachment: scroll;
+    radial-gradient(circle at 40px 60px, #ffffff 1px, transparent 2px),
+    radial-gradient(circle at 150px 10px, rgba(255,255,255,0.8) 1px, transparent 2px),
+    radial-gradient(circle at 200px 180px, #ffffff 1.5px, transparent 2px),
+    radial-gradient(circle at 80px 220px, rgba(255,255,255,0.7) 1px, transparent 2px),
+    radial-gradient(circle at 350px 330px, rgba(255,255,255,0.9) 1px, transparent 2px),
+    radial-gradient(circle at 450px 100px, #ffffff 1.5px, transparent 2px),
+    radial-gradient(circle at 500px 480px, rgba(255,255,255,0.8) 1px, transparent 2px);
+  background-size: 550px 550px;
+  animation: twinkle 4s infinite alternate, drift 150s linear infinite;
+}
+
+.starLayer2 {
+  background-image: 
+    radial-gradient(circle at 20px 220px, rgba(255,255,255,0.9) 1px, transparent 2px),
+    radial-gradient(circle at 100px 30px, #ffffff 1.5px, transparent 2px),
+    radial-gradient(circle at 280px 240px, rgba(255,255,255,0.6) 1px, transparent 2px),
+    radial-gradient(circle at 380px 150px, rgba(255,255,255,0.8) 1.5px, transparent 2px),
+    radial-gradient(circle at 520px 380px, rgba(255,255,255,0.7) 1px, transparent 2px),
+    radial-gradient(circle at 150px 450px, #ffffff 2px, transparent 3px);
+  background-size: 600px 600px;
+  animation: twinkle 5s infinite alternate-reverse, drift 100s linear infinite reverse;
+}
+
+.starLayer3 {
+  background-image: 
+    radial-gradient(circle at 50px 300px, #ffffff 2px, transparent 3px),
+    radial-gradient(circle at 180px 80px, rgba(255,255,255,0.5) 1px, transparent 2px),
+    radial-gradient(circle at 300px 420px, rgba(255,255,255,0.7) 1px, transparent 2px),
+    radial-gradient(circle at 420px 200px, rgba(255,255,255,0.9) 2px, transparent 3px),
+    radial-gradient(circle at 580px 520px, rgba(255,255,255,0.6) 1px, transparent 2px);
+  background-size: 700px 700px;
+  animation: twinkle 6s infinite alternate, drift 200s linear infinite;
+}
+
+@keyframes twinkle {
+  0% { opacity: 0.15; }
+  100% { opacity: 0.85; }
+}
+
+@keyframes drift {
+  from { transform: translateY(0) translateX(0); }
+  to { transform: translateY(-700px) translateX(-300px); }
 }
 
 /* Background Ambient Glow */

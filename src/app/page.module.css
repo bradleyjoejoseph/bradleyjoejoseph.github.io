@@ -533,24 +533,59 @@
   margin-bottom: 3rem;
 }
 
-.btnPrimaryLg {
-  background: var(--maroon-gradient);
-  color: #fff;
-  padding: 1rem 2.5rem;
-  border-radius: 8px;
-  font-weight: 700;
-  font-size: 1.1rem;
-  transition: var(--transition-fast);
-  border: 1px solid transparent;
-  box-shadow: 0 4px 15px rgba(128, 0, 0, 0.4);
-  display: inline-block;
-  margin-bottom: 3rem;
+.contactBox {
+  display: flex;
+  flex-direction: column;
+  gap: 0.75rem;
+  background: var(--bg-surface);
+  border: 1px solid var(--border-color);
+  border-radius: 16px;
+  padding: 1.5rem;
+  width: 100%;
+  max-width: 500px;
+  margin-top: 1rem;
+  backdrop-filter: blur(12px);
 }
 
-.btnPrimaryLg:hover {
+.contactBoxLink {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 1rem 1.25rem;
+  background: rgba(255, 255, 255, 0.02);
+  border: 1px solid transparent;
+  border-radius: 10px;
+  text-decoration: none;
+  transition: var(--transition-fast);
+}
+
+.contactBoxLink:hover {
+  background: rgba(255, 255, 255, 0.05);
+  border-color: rgba(255, 255, 255, 0.1);
   transform: translateY(-2px);
-  box-shadow: 0 8px 25px rgba(128, 0, 0, 0.6);
-  border-color: rgba(255, 255, 255, 0.2);
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.2);
+}
+
+.contactBoxPlatform {
+  font-weight: 600;
+  color: #fff;
+  font-size: 0.95rem;
+  letter-spacing: 0.05em;
+  text-transform: uppercase;
+}
+
+.contactBoxHandle {
+  color: var(--text-secondary);
+  font-size: 0.9rem;
+  font-family: monospace;
+}
+
+.contactFooterNote {
+  margin-top: 1.5rem;
+  font-size: 0.85rem;
+  color: var(--text-tertiary);
+  font-style: italic;
+  letter-spacing: 0.05em;
 }
 
 .heroTextLink {
@@ -560,30 +595,14 @@
   text-decoration: none;
   font-size: 0.95rem;
   letter-spacing: 0.05em;
+  display: inline-flex;
+  align-items: center;
+  transform: translateY(1px);
 }
 
 .heroTextLink:hover {
   color: #fff;
   text-decoration: underline;
-}
-
-.contactSocials {
-  display: flex;
-  gap: 1.5rem;
-  align-items: center;
-  color: var(--text-tertiary);
-  font-family: monospace;
-  font-size: 1rem;
-}
-
-.contactSocials a {
-  color: var(--text-secondary);
-  transition: var(--transition-fast);
-  font-weight: 600;
-}
-
-.contactSocials a:hover {
-  color: #fff;
 }
 
 @media (max-width: 900px) {

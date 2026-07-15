@@ -337,14 +337,23 @@ export default function Home() {
             <p className={styles.contactDesc}>
               Whether you have a question, an opportunity, or just want to say hi, I'll try my best to get back to you!
             </p>
-            <a href="mailto:bradleyjoejoseph@gmail.com" className={styles.btnPrimaryLg}>
-              bradleyjoejoseph@gmail.com
-            </a>
-            <div className={styles.contactSocials}>
-              <a href="https://github.com/bradleyjoejoseph" target="_blank" rel="noopener noreferrer">GitHub</a>
-              <span>//</span>
-              <a href="https://linkedin.com/in/bradleyjoejoseph" target="_blank" rel="noopener noreferrer">LinkedIn</a>
+            <div className={styles.contactBox}>
+              <a href="mailto:bradleyjoejoseph@gmail.com" className={styles.contactBoxLink}>
+                <span className={styles.contactBoxPlatform}>Email</span>
+                <span className={styles.contactBoxHandle}>bradleyjoejoseph@gmail.com</span>
+              </a>
+              <a href="https://github.com/bradleyjoejoseph" target="_blank" rel="noopener noreferrer" className={styles.contactBoxLink}>
+                <span className={styles.contactBoxPlatform}>GitHub</span>
+                <span className={styles.contactBoxHandle}>bradleyjoejoseph</span>
+              </a>
+              <a href="https://linkedin.com/in/bradleyjoejoseph" target="_blank" rel="noopener noreferrer" className={styles.contactBoxLink}>
+                <span className={styles.contactBoxPlatform}>LinkedIn</span>
+                <span className={styles.contactBoxHandle}>bradleyjoejoseph</span>
+              </a>
             </div>
+            <p className={styles.contactFooterNote}>
+              * @bradleyjoejoseph on everything
+            </p>
           </div>
         </section>
 
