@@ -13,18 +13,6 @@
 
 const projectsData = [
   {
-    id: "the-enigma",
-    name: "The Enigma",
-    image: "enigmaroblox.png",
-    shortDescription:
-      "Multiplayer Roblox game with 5,500+ visits and 1,000+ MAU.",
-    detailedDescription:
-      "Designed and developed a multiplayer online game on Roblox, writing over 90% of the Lua scripting from scratch. Implemented client-server networking optimisations to reduce payload sizes, resulting in low-latency multiplayer replication. Scaled to over 5,500 total visits and 1,000+ monthly active users, earning the Roblox 'Bombastic Crown of O's' creator award.",
-    techStack: [{ name: "Lua", icon: "devicon-lua-plain" }],
-    link: "https://www.roblox.com/games/5273881225/The-Enigma",
-    github: null,
-  },
-  {
     id: "infinity-arcade",
     name: "Infinity Arcade",
     image: "cs50.png",
@@ -159,7 +147,6 @@ const skillsData = {
     { name: "C#", icon: "devicon-csharp-plain" },
     { name: "C", icon: "devicon-c-plain" },
     { name: "SQL", icon: "fas fa-database" },
-    { name: "Lua", icon: "devicon-lua-plain" },
     { name: "HTML/CSS", icon: "devicon-html5-plain" },
   ],
   "Frameworks & Libraries": [
@@ -183,9 +170,9 @@ const skillsData = {
    2. DOM REFERENCES
    ────────────────────────────────────────────── */
 
-const skillsGrid = document.getElementById("skills-grid");
-const projectsGrid = document.getElementById("projects-grid");
-const certificationsGrid = document.getElementById("certifications-grid");
+const skillsGrid = document.getElementById("skills-container");
+const projectsGrid = document.getElementById("projects-container");
+const certificationsGrid = document.getElementById("certifications-container");
 const modalOverlay = document.getElementById("modal-overlay");
 const modalBody = document.getElementById("modal-body");
 const modalClose = document.getElementById("modal-close");
