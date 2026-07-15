@@ -147,6 +147,7 @@
   transition: var(--transition-fast);
   border: 1px solid transparent;
   box-shadow: 0 4px 15px rgba(128, 0, 0, 0.4);
+  white-space: nowrap;
 }
 
 .btnPrimary:hover {
@@ -165,6 +166,7 @@
   transition: var(--transition-fast);
   border: 1px solid var(--border-color);
   backdrop-filter: blur(10px);
+  white-space: nowrap;
 }
 
 .btnSecondary:hover {
