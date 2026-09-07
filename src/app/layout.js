@@ -6,6 +6,9 @@ const inter = Inter({ subsets: ['latin'], display: 'swap' });
 export const metadata = {
   title: 'Bradley Joe Joseph — Software Engineer',
   description: 'Portfolio of Bradley Joe Joseph — Backend Systems & AI at University of York.',
+  icons: {
+    icon: '/favicon.ico',
+  },
 };
 
 export default function RootLayout({ children }) {
