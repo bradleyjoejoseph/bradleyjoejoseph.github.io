@@ -105,10 +105,9 @@ export default function Home() {
               </p>
               <p className={styles.aboutText}>
                 Beyond the terminal, I operate with the same high-performance
-                mindset. I play American football for the university, I like
-                boxing and MMA, and train consistently in bodybuilding, a
-                discipline that directly fuels my work ethic. I'm also a former
-                county badminton player.
+                mindset. I play American football for the university and train
+                consistently in bodybuilding, a discipline that directly fuels
+                my work ethic. I'm also a former county badminton player.
               </p>
               <p className={styles.aboutText}>
                 When I'm completely offline, you'll find me playing competitive
@@ -141,7 +140,6 @@ export default function Home() {
                 <div className={styles.cardTags}>
                   <span className={styles.tagInterest}>American Football</span>
                   <span className={styles.tagInterest}>Bodybuilding</span>
-                  <span className={styles.tagInterest}>MMA & Boxing</span>
                   <span className={styles.tagInterest}>Game Dev</span>
                   <span className={styles.tagInterest}>
                     Competitive Pokémon
