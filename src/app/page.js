@@ -4,6 +4,29 @@ import styles from "./page.module.css";
 export default function Home() {
   return (
     <>
+      {/* MOBILE TOP NAVIGATION BAR (Only visible on mobile/tablet <= 1200px) */}
+      <header className={styles.mobileNav}>
+        <div className={styles.mobileNavContainer}>
+          <a href="#about" className={styles.mobileLogo}>
+            BJJ
+          </a>
+          <nav className={styles.mobileNavLinks} aria-label="Mobile Navigation">
+            <a href="#about" className={styles.mobileNavLink}>
+              About
+            </a>
+            <a href="#highlighted-projects" className={styles.mobileNavLink}>
+              Projects
+            </a>
+            <a href="#certifications" className={styles.mobileNavLink}>
+              Certs
+            </a>
+            <a href="#contact" className={styles.mobileNavLink}>
+              Contact
+            </a>
+          </nav>
+        </div>
+      </header>
+
       {/* FIXED PAGE NAVIGATION SIDEBAR */}
       <nav className={styles.navSidebar}>
         <ul className={styles.navList}>
@@ -98,7 +121,7 @@ export default function Home() {
             <div className={styles.aboutTextCol}>
               <h2 className={styles.sectionHeader}>Behind the Code</h2>
               <p className={styles.aboutText}>
-                I'm a software engineer pursuing my{" "}
+                I&apos;m a software engineer pursuing my{" "}
                 <strong>MEng (Hons) in Computer Science with AI</strong> at the
                 University of York (2025–2030), blending low-level systems
                 engineering with modern machine learning architectures.
@@ -107,12 +130,12 @@ export default function Home() {
                 Beyond the terminal, I operate with the same high-performance
                 mindset. I play American football for the university and train
                 consistently in bodybuilding, a discipline that directly fuels
-                my work ethic. I'm also a former county badminton player.
+                my work ethic. I&apos;m also a former county badminton player.
               </p>
               <p className={styles.aboutText}>
-                When I'm completely offline, you'll find me playing competitive
+                When I&apos;m completely offline, you&apos;ll find me playing competitive
                 Pokémon Showdown (OU tier) or Yu-Gi-Oh! Master Duel, solving
-                Rubik's cubes, or pursuing creative outlets spanning fashion,
+                Rubik&apos;s cubes, or pursuing creative outlets spanning fashion,
                 luxury automotive design, interior design, and poetry.
               </p>
             </div>
@@ -524,11 +547,11 @@ export default function Home() {
         {/* CONTACT SECTION */}
         <section id="contact" className={styles.contactSection}>
           <div className={styles.contactContainer}>
-            <span className={styles.cardLabel}>What's Next?</span>
+            <span className={styles.cardLabel}>What&apos;s Next?</span>
             <h2 className={styles.contactTitle}>Get In Touch</h2>
             <p className={styles.contactDesc}>
               Whether you have a question, an opportunity, or just want to say
-              hi, I'll try my best to get back to you!
+              hi, I&apos;ll try my best to get back to you!
             </p>
             <div className={styles.contactBox}>
               <a

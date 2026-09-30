@@ -3,6 +3,13 @@ import './globals.css';
 
 const inter = Inter({ subsets: ['latin'], display: 'swap' });
 
+export const viewport = {
+  width: 'device-width',
+  initialScale: 1,
+  maximumScale: 5,
+  themeColor: '#0a0f1c',
+};
+
 export const metadata = {
   title: 'Bradley Joe Joseph — Software Engineer',
   description: 'Portfolio of Bradley Joe Joseph — Backend Systems & AI at University of York.',

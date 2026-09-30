@@ -85,9 +85,69 @@
   transform: translateX(-5px);
 }
 
+/* MOBILE TOP NAVIGATION (Hidden on Desktop) */
+.mobileNav {
+  display: none;
+}
+
 @media (max-width: 1200px) {
   .navSidebar {
     display: none;
+  }
+
+  .mobileNav {
+    display: block;
+    position: sticky;
+    top: 0;
+    left: 0;
+    width: 100%;
+    z-index: 100;
+    background: rgba(10, 15, 28, 0.85);
+    backdrop-filter: blur(16px);
+    -webkit-backdrop-filter: blur(16px);
+    border-bottom: 1px solid var(--border-color);
+  }
+
+  .mobileNavContainer {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0.75rem 1.25rem;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+  }
+
+  .mobileLogo {
+    font-weight: 800;
+    font-size: 1.05rem;
+    letter-spacing: 0.05em;
+    color: #ffffff;
+    padding: 0.3rem 0.6rem;
+    border-radius: 8px;
+    background: var(--maroon-gradient);
+    border: 1px solid rgba(255, 255, 255, 0.15);
+    box-shadow: 0 2px 10px rgba(128, 0, 0, 0.3);
+  }
+
+  .mobileNavLinks {
+    display: flex;
+    align-items: center;
+    gap: 0.35rem;
+  }
+
+  .mobileNavLink {
+    color: var(--text-secondary);
+    font-size: 0.85rem;
+    font-weight: 500;
+    padding: 0.45rem 0.65rem;
+    border-radius: 8px;
+    transition: var(--transition-fast);
+  }
+
+  .mobileNavLink:hover,
+  .mobileNavLink:active {
+    color: #ffffff;
+    background: rgba(255, 255, 255, 0.06);
   }
 }
 
@@ -95,17 +155,6 @@
   margin-top: 4rem;
 }
 
-@media (max-width: 768px) {
-  .hero {
-    flex-direction: column-reverse;
-    align-items: flex-start;
-    gap: 2rem;
-  }
-  .profileImageContainer {
-    width: 150px;
-    height: 150px;
-  }
-}
 
 .hero h1 {
   font-size: clamp(3rem, 6vw, 5.5rem);
@@ -610,3 +659,262 @@
     grid-template-columns: 1fr;
   }
 }
+
+/* ==========================================================================
+   MOBILE RESPONSIVE STYLES (TABLETS & PHONES)
+   Desktop layout is completely preserved.
+   ========================================================================== */
+
+@media (max-width: 768px) {
+  .container {
+    padding: 3rem 1.25rem 2.5rem;
+    gap: 4.5rem;
+  }
+
+  .sectionMargin {
+    margin-top: 0;
+  }
+
+  .sectionHeader {
+    font-size: 1.4rem;
+    margin-bottom: 1.5rem;
+  }
+
+  .hero {
+    flex-direction: column-reverse;
+    align-items: flex-start;
+    gap: 1.75rem;
+  }
+
+  .profileImageContainer {
+    width: 130px;
+    height: 130px;
+  }
+
+  .hero h1 {
+    font-size: clamp(2.25rem, 8vw, 3.25rem);
+    word-break: break-word;
+  }
+
+  .heroSubtitle {
+    font-size: 1.05rem;
+  }
+
+  .heroDescription {
+    font-size: 1rem;
+    line-height: 1.6;
+  }
+
+  .ctas {
+    flex-wrap: wrap;
+    gap: 0.75rem;
+    margin-top: 1.25rem;
+    width: 100%;
+  }
+
+  .bentoGrid {
+    display: flex;
+    flex-direction: column;
+    gap: 1.25rem;
+  }
+
+  .bentoItem {
+    border-radius: 16px;
+  }
+
+  .bentoImageContainer {
+    height: 190px;
+  }
+
+  .bentoContent {
+    padding: 1.5rem 1.25rem;
+  }
+
+  .cardTitle {
+    font-size: 1.35rem;
+    margin-bottom: 0.5rem;
+  }
+
+  .cardDesc {
+    font-size: 0.9rem;
+    line-height: 1.55;
+    margin-bottom: 1.25rem;
+  }
+
+  .cardLink {
+    margin-top: 1rem;
+    font-size: 0.9rem;
+    min-height: 44px;
+    display: inline-flex;
+    align-items: center;
+  }
+
+  .grid3Col, .grid2Col {
+    gap: 1.25rem;
+  }
+
+  .secondaryCard {
+    border-radius: 16px;
+  }
+
+  .secondaryCardImage {
+    height: 160px;
+  }
+
+  .secondaryCardContent {
+    padding: 1.25rem;
+  }
+
+  .secondaryCardTitle {
+    font-size: 1.15rem;
+  }
+
+  .secondaryCardDesc {
+    font-size: 0.85rem;
+    line-height: 1.5;
+    margin-bottom: 1rem;
+  }
+
+  .aboutGrid {
+    padding: 1.75rem 1.25rem;
+    gap: 2rem;
+    border-radius: 16px;
+  }
+
+  .aboutText {
+    font-size: 0.95rem;
+    line-height: 1.6;
+    margin-bottom: 1.25rem;
+  }
+
+  .aboutDataCol {
+    gap: 2rem;
+  }
+
+  .dataHeader {
+    font-size: 1.1rem;
+    margin-bottom: 0.75rem;
+  }
+
+  .tag, .tagInterest {
+    font-size: 0.78rem;
+    padding: 0.35rem 0.7rem;
+  }
+
+  .contactSection {
+    margin-top: 2rem;
+    padding: 2.5rem 0;
+  }
+
+  .contactTitle {
+    font-size: clamp(2rem, 7vw, 2.75rem);
+    margin-bottom: 1rem;
+  }
+
+  .contactDesc {
+    font-size: 0.95rem;
+    margin-bottom: 2rem;
+  }
+
+  .contactBox {
+    padding: 1rem;
+    border-radius: 14px;
+  }
+}
+
+@media (max-width: 480px) {
+  .container {
+    padding: 2.25rem 1rem 2rem;
+    gap: 3.75rem;
+  }
+
+  .profileImageContainer {
+    width: 105px;
+    height: 105px;
+  }
+
+  .ctas {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 0.65rem;
+  }
+
+  .btnPrimary {
+    grid-column: span 2;
+    text-align: center;
+    padding: 0.85rem 1.25rem;
+    font-size: 0.95rem;
+  }
+
+  .btnSecondary {
+    text-align: center;
+    padding: 0.75rem 0.75rem;
+    font-size: 0.85rem;
+  }
+
+  .heroTextLink {
+    grid-column: span 2;
+    justify-content: center;
+    text-align: center;
+    font-size: 0.85rem;
+    margin-top: 0.25rem;
+    word-break: break-all;
+  }
+
+  .aboutGrid {
+    padding: 1.25rem 1rem;
+  }
+
+  .aboutText {
+    font-size: 0.9rem;
+  }
+
+  .bentoContent {
+    padding: 1.25rem 1rem;
+  }
+
+  .bentoImageContainer {
+    height: 170px;
+  }
+
+  .secondaryCardImage {
+    height: 140px;
+  }
+
+  .secondaryCardContent {
+    padding: 1rem;
+  }
+
+  .contactBoxLink {
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 0.35rem;
+    padding: 0.85rem 1rem;
+  }
+
+  .contactBoxHandle {
+    word-break: break-all;
+    font-size: 0.85rem;
+  }
+}
+
+@media (max-width: 380px) {
+  .mobileNavContainer {
+    padding: 0.6rem 0.75rem;
+  }
+
+  .mobileNavLink {
+    font-size: 0.78rem;
+    padding: 0.35rem 0.45rem;
+  }
+
+  .mobileLogo {
+    font-size: 0.95rem;
+    padding: 0.2rem 0.45rem;
+  }
+
+  .hero h1 {
+    font-size: 2rem;
+  }
+}
+
