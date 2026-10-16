@@ -4,7 +4,7 @@
   "private": true,
   "scripts": {
     "dev": "next dev",
-    "build": "mkdir -p out && cp index.html style.css script.js cv.html *.png *.jpg *.pdf out/ && cp -r public/* out/ 2>/dev/null || true",
+    "build": "mkdir -p out && cp index.html style.css script.js cv.html *.png *.jpg *.svg *.pdf out/ 2>/dev/null || cp index.html style.css script.js cv.html *.png *.jpg *.pdf out/ && cp -r public/* out/ 2>/dev/null || true",
     "start": "next start",
     "lint": "eslint"
   },
