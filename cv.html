@@ -208,32 +208,45 @@
       margin-bottom: 0.35rem;
     }
 
-    /* Skills Grid with Progress Bars */
+    /* Skills Grid with Progress Bars & Category Badges */
     .skills-container {
       display: grid;
-      grid-template-columns: repeat(auto-fill, minmax(240px, 1fr));
+      grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
       gap: 1.25rem;
     }
 
     .skill-card {
       background: #f8fafc;
       border: 1px solid #e2e8f0;
-      padding: 0.85rem 1rem;
-      border-radius: 6px;
+      padding: 1.1rem 1.25rem;
+      border-radius: 8px;
+      display: flex;
+      flex-direction: column;
+      transition: all 0.2s ease;
+    }
+
+    .skill-card:hover {
+      background: #ffffff;
+      border-color: #cbd5e1;
+      box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.05);
     }
 
     .skill-info {
       display: flex;
       justify-content: space-between;
-      margin-bottom: 0.4rem;
-      font-weight: 600;
-      font-size: 0.9rem;
-      color: #1e293b;
+      align-items: baseline;
+      margin-bottom: 0.35rem;
+      font-weight: 700;
+      font-size: 0.95rem;
+      color: #0f172a;
     }
 
     .skill-level-text {
       color: #008080;
       font-size: 0.8rem;
+      font-weight: 700;
+      text-transform: uppercase;
+      letter-spacing: 0.04em;
     }
 
     .skill-bar {
@@ -242,6 +255,7 @@
       background: #e2e8f0;
       border-radius: 3px;
       overflow: hidden;
+      margin-bottom: 0.75rem;
     }
 
     .skill-progress {
@@ -336,81 +350,90 @@
           <span class="item-date">2025 – 2030</span>
         </div>
         <p class="item-desc">
-          Rigorous integrated masters covering systems design, artificial intelligence, low-level architecture, software engineering, and machine learning.
+          Integrated masters covering systems design, artificial intelligence, low-level architecture, software engineering, and machine learning.
         </p>
         <ul class="bullet-list">
           <li><strong>Relevant Modules:</strong> Object-Oriented Programming (Java), Systems Architecture, Low-Level Software (C & Assembly), Mathematics for Computer Science, Algorithms & Data Structures.</li>
-          <li><strong>Athletics & Leadership:</strong> University American Football Team, University Bodybuilding & Strength Club.</li>
+          <li><strong>Athletics & Leadership:</strong> University American Football Team.</li>
         </ul>
       </div>
     </section>
 
-    <!-- Technical Skills -->
+    <!-- Technical Skills (Categories + Overall Proficiency + Shield Badges) -->
     <section class="section">
       <h2 class="section-title"><i class="fa-solid fa-code"></i> Technical Arsenal & Proficiency</h2>
       <div class="skills-container">
         <div class="skill-card">
           <div class="skill-info">
-            <span>Python</span>
+            <span>Core Programming & Systems</span>
             <span class="skill-level-text">Advanced / Primary</span>
           </div>
-          <div class="skill-bar"><div class="skill-progress" style="width: 90%;"></div></div>
+          <div class="skill-bar"><div class="skill-progress" style="width: 88%;"></div></div>
+          <div class="badges-row">
+            <img src="https://img.shields.io/badge/Python-3776AB?style=flat-square&logo=python&logoColor=white" alt="Python">
+            <img src="https://img.shields.io/badge/JavaScript-F7DF1E?style=flat-square&logo=javascript&logoColor=black" alt="JavaScript">
+            <img src="https://img.shields.io/badge/C%23-239120?style=flat-square&logo=c-sharp&logoColor=white" alt="C#">
+            <img src="https://img.shields.io/badge/SQLite-003B57?style=flat-square&logo=sqlite&logoColor=white" alt="SQLite">
+            <img src="https://img.shields.io/badge/Lua-2C2D72?style=flat-square&logo=lua&logoColor=white" alt="Lua">
+            <img src="https://img.shields.io/badge/C-A8B9CC?style=flat-square&logo=c&logoColor=black" alt="C">
+            <img src="https://img.shields.io/badge/Java-ED8B00?style=flat-square&logo=openjdk&logoColor=white" alt="Java">
+            <img src="https://img.shields.io/badge/TypeScript-007ACC?style=flat-square&logo=typescript&logoColor=white" alt="TypeScript">
+            <img src="https://img.shields.io/badge/HTML5-E34F26?style=flat-square&logo=html5&logoColor=white" alt="HTML5">
+            <img src="https://img.shields.io/badge/CSS3-1572B6?style=flat-square&logo=css3&logoColor=white" alt="CSS3">
+          </div>
         </div>
 
         <div class="skill-card">
           <div class="skill-info">
-            <span>JavaScript</span>
-            <span class="skill-level-text">Proficient</span>
+            <span>Web Frameworks & Databases</span>
+            <span class="skill-level-text">Proficient / Applied</span>
+          </div>
+          <div class="skill-bar"><div class="skill-progress" style="width: 82%;"></div></div>
+          <div class="badges-row">
+            <img src="https://img.shields.io/badge/Flask-000000?style=flat-square&logo=flask&logoColor=white" alt="Flask">
+            <img src="https://img.shields.io/badge/Django-092E20?style=flat-square&logo=django&logoColor=white" alt="Django">
+            <img src="https://img.shields.io/badge/React-20232A?style=flat-square&logo=react&logoColor=61DAFB" alt="React">
+            <img src="https://img.shields.io/badge/PostgreSQL-316192?style=flat-square&logo=postgresql&logoColor=white" alt="PostgreSQL">
+            <img src="https://img.shields.io/badge/Bootstrap-563D7C?style=flat-square&logo=bootstrap&logoColor=white" alt="Bootstrap">
+          </div>
+        </div>
+
+        <div class="skill-card">
+          <div class="skill-info">
+            <span>Game Engines & 3D Modeling</span>
+            <span class="skill-level-text">Production Scaled (5.5k+ Visits)</span>
           </div>
           <div class="skill-bar"><div class="skill-progress" style="width: 85%;"></div></div>
-        </div>
-
-        <div class="skill-card">
-          <div class="skill-info">
-            <span>C# & .NET</span>
-            <span class="skill-level-text">High / Applied</span>
+          <div class="badges-row">
+            <img src="https://img.shields.io/badge/Roblox_Studio-000000?style=flat-square&logo=roblox&logoColor=white" alt="Roblox Studio">
+            <img src="https://img.shields.io/badge/Godot-478CBF?style=flat-square&logo=godot-engine&logoColor=white" alt="Godot Engine">
+            <img src="https://img.shields.io/badge/Unity-100000?style=flat-square&logo=unity&logoColor=white" alt="Unity">
+            <img src="https://img.shields.io/badge/Blender-E87D0D?style=flat-square&logo=blender&logoColor=white" alt="Blender">
           </div>
-          <div class="skill-bar"><div class="skill-progress" style="width: 75%;"></div></div>
         </div>
 
         <div class="skill-card">
           <div class="skill-info">
-            <span>SQL & SQLite</span>
-            <span class="skill-level-text">Security-Conscious</span>
-          </div>
-          <div class="skill-bar"><div class="skill-progress" style="width: 80%;"></div></div>
-        </div>
-
-        <div class="skill-card">
-          <div class="skill-info">
-            <span>Lua & Roblox Studio</span>
-            <span class="skill-level-text">Production (5.5k+ Visits)</span>
+            <span>AI Systems, Workflow & Tooling</span>
+            <span class="skill-level-text">Proficient / Applied</span>
           </div>
           <div class="skill-bar"><div class="skill-progress" style="width: 85%;"></div></div>
-        </div>
-
-        <div class="skill-card">
-          <div class="skill-info">
-            <span>C</span>
-            <span class="skill-level-text">Academic (CS50x)</span>
+          <div class="badges-row">
+            <img src="https://img.shields.io/badge/Git-F05032?style=flat-square&logo=git&logoColor=white" alt="Git">
+            <img src="https://img.shields.io/badge/GitHub-100000?style=flat-square&logo=github&logoColor=white" alt="GitHub">
+            <img src="https://img.shields.io/badge/macOS-000000?style=flat-square&logo=apple&logoColor=white" alt="macOS">
+            <img src="https://img.shields.io/badge/Windows-0078D6?style=flat-square&logo=windows&logoColor=white" alt="Windows">
+            <img src="https://img.shields.io/badge/Claude-D97706?style=flat-square&logo=anthropic&logoColor=white" alt="Claude">
+            <img src="https://img.shields.io/badge/ChatGPT-74aa9c?style=flat-square&logo=openai&logoColor=white" alt="ChatGPT">
+            <img src="https://img.shields.io/badge/Gemini-8E75C4?style=flat-square&logo=google-gemini&logoColor=white" alt="Gemini">
+            <img src="https://img.shields.io/badge/Perplexity-20B2AA?style=flat-square&logo=perplexity&logoColor=white" alt="Perplexity">
+            <img src="https://img.shields.io/badge/Grok-000000?style=flat-square&logo=x&logoColor=white" alt="Grok">
+            <img src="https://img.shields.io/badge/Antigravity-4285F4?style=flat-square&logo=google&logoColor=white" alt="Antigravity">
+            <img src="https://img.shields.io/badge/CapCut-000000?style=flat-square&logo=capcut&logoColor=white" alt="CapCut">
+            <img src="https://img.shields.io/badge/Nano_Banana-FFD700?style=flat-square&logoColor=black" alt="Nano Banana">
+            <img src="https://img.shields.io/badge/Google_Veo-4285F4?style=flat-square&logo=google&logoColor=white" alt="Veo">
+            <img src="https://img.shields.io/badge/OpenAI_Sora-000000?style=flat-square&logo=openai&logoColor=white" alt="Sora">
           </div>
-          <div class="skill-bar"><div class="skill-progress" style="width: 70%;"></div></div>
-        </div>
-
-        <div class="skill-card">
-          <div class="skill-info">
-            <span>Java</span>
-            <span class="skill-level-text">Academic (OOP)</span>
-          </div>
-          <div class="skill-bar"><div class="skill-progress" style="width: 75%;"></div></div>
-        </div>
-
-        <div class="skill-card">
-          <div class="skill-info">
-            <span>HTML5 & CSS3</span>
-            <span class="skill-level-text">Native / Lifelong</span>
-          </div>
-          <div class="skill-bar"><div class="skill-progress" style="width: 95%;"></div></div>
         </div>
       </div>
     </section>
@@ -457,25 +480,33 @@
       <div class="item">
         <div class="item-header">
           <div>
-            <span class="item-title">Enigma: RTC</span> — <span class="item-subtitle">Real-Time Combat Game</span>
+            <span class="item-title">Enigma: RTC</span> — <span class="item-subtitle">Combat Game Prototype</span>
           </div>
           <span class="item-date">Godot Engine · C#</span>
         </div>
         <p class="item-desc">
-          Built state synchronization logic, character physics controllers, and structured event-driven gameplay loops in Godot for competitive fast-paced combat.
+          Real-time combat game prototype developed in Godot using C#. Implemented player character movement, combat mechanics, collision detection, and user inputs.
         </p>
+        <div class="badges-row">
+          <img src="https://img.shields.io/badge/Godot-478CBF?style=flat-square&logo=godot-engine&logoColor=white" alt="Godot Engine">
+          <img src="https://img.shields.io/badge/C%23-239120?style=flat-square&logo=c-sharp&logoColor=white" alt="C#">
+        </div>
       </div>
 
       <div class="item">
         <div class="item-header">
           <div>
-            <span class="item-title">Infinity Slope 1</span> — <span class="item-subtitle">3D Runner Game & Physics</span>
+            <span class="item-title">Enigma: Scratching the Surface</span> — <span class="item-subtitle">3D Runner Game</span>
           </div>
-          <span class="item-date">Unity · C# · Blender</span>
+          <span class="item-date">Unity · C#</span>
         </div>
         <p class="item-desc">
-          Procedurally generated slope terrain runner game published on Google Play and Sketchfab, utilizing physics-based acceleration modifiers and procedural generation.
+          3D level-based runner game developed in Unity with C# and published to Google Play. Created premade level courses, player movement physics, obstacle collision detection, and mobile touch controls.
         </p>
+        <div class="badges-row">
+          <img src="https://img.shields.io/badge/Unity-100000?style=flat-square&logo=unity&logoColor=white" alt="Unity">
+          <img src="https://img.shields.io/badge/C%23-239120?style=flat-square&logo=c-sharp&logoColor=white" alt="C#">
+        </div>
       </div>
     </section>
 
@@ -497,7 +528,7 @@
     <section class="section">
       <h2 class="section-title"><i class="fa-solid fa-heart"></i> Interests & Discipline</h2>
       <p class="item-desc">
-        University American Football Player · Bodybuilding & Strength Athletics · Former County Badminton Player · Competitive Pokémon Showdown (OU Tier PvP) · Speedcubing (3x3 Rubik's Cube) · Automotive & Industrial Design.
+        University American Football Player · Strength Athletics · Former County Badminton Player · Competitive Pokémon Showdown (OU Tier PvP) · Speedcubing (3x3 Rubik's Cube) · Automotive & Industrial Design.
       </p>
     </section>
   </div>
