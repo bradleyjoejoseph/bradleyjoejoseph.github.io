@@ -1,0 +1,506 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=no" />
+  <title>Bradley Joe Joseph — Curriculum Vitae</title>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css" />
+  <link href="https://fonts.googleapis.com/css2?family=Open+Sans:ital,wght@0,300;0,400;0,600;0,700;1,400&display=swap" rel="stylesheet">
+  <style>
+    /* CSS Reset */
+    *, *::before, *::after {
+      box-sizing: border-box;
+      margin: 0;
+      padding: 0;
+    }
+
+    body, html {
+      font-family: "Open Sans", -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
+      font-size: 14px;
+      color: #374151;
+      background-color: #f8fafc;
+      line-height: 1.6;
+      -webkit-text-size-adjust: 100%;
+    }
+
+    a {
+      color: #008080;
+      text-decoration: none;
+      transition: color 0.2s ease;
+    }
+
+    a:hover {
+      color: #005959;
+      text-decoration: underline;
+    }
+
+    /* CV Container */
+    #resume {
+      max-width: 860px;
+      margin: 2rem auto;
+      background: #ffffff;
+      padding: 3rem;
+      border-radius: 8px;
+      box-shadow: 0 4px 20px rgba(0, 0, 0, 0.06);
+      border: 1px solid #e2e8f0;
+    }
+
+    /* Header */
+    #header {
+      border-bottom: 2px solid #e2e8f0;
+      padding-bottom: 2rem;
+      margin-bottom: 2rem;
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: space-between;
+      align-items: center;
+      gap: 1.5rem;
+    }
+
+    .header-info {
+      flex: 1;
+      min-width: 280px;
+    }
+
+    #header h1.name {
+      font-size: 2.4rem;
+      font-weight: 700;
+      color: #0f172a;
+      line-height: 1.1;
+      margin-bottom: 0.5rem;
+    }
+
+    #header h2.label {
+      font-size: 1.15rem;
+      color: #008080;
+      font-weight: 600;
+      margin-bottom: 1rem;
+    }
+
+    .contact-details {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 1.25rem;
+      font-size: 0.9rem;
+      color: #64748b;
+    }
+
+    .contact-item {
+      display: inline-flex;
+      align-items: center;
+      gap: 0.4rem;
+    }
+
+    .contact-item i {
+      color: #008080;
+    }
+
+    .header-actions {
+      display: flex;
+      flex-direction: column;
+      align-items: flex-end;
+      gap: 0.75rem;
+    }
+
+    .header-picture {
+      width: 90px;
+      height: 90px;
+      border-radius: 50%;
+      object-fit: cover;
+      border: 3px solid #008080;
+      box-shadow: 0 4px 10px rgba(0, 128, 128, 0.2);
+    }
+
+    .btn-download {
+      display: inline-flex;
+      align-items: center;
+      gap: 0.5rem;
+      background: #008080;
+      color: #ffffff;
+      padding: 0.5rem 1rem;
+      border-radius: 6px;
+      font-size: 0.85rem;
+      font-weight: 600;
+      transition: background 0.2s ease, transform 0.1s ease;
+    }
+
+    .btn-download:hover {
+      background: #006666;
+      color: #ffffff;
+      text-decoration: none;
+      transform: translateY(-1px);
+    }
+
+    /* Section Styling */
+    .section {
+      margin-bottom: 2.25rem;
+    }
+
+    h2.section-title {
+      font-size: 1.05rem;
+      text-transform: uppercase;
+      letter-spacing: 0.08em;
+      color: #008080;
+      font-weight: 700;
+      border-bottom: 1px solid #cbd5e1;
+      padding-bottom: 0.4rem;
+      margin-bottom: 1.25rem;
+      display: flex;
+      align-items: center;
+      gap: 0.5rem;
+    }
+
+    .summary-box {
+      background: #f0fdfa;
+      border-left: 4px solid #008080;
+      padding: 1rem 1.25rem;
+      border-radius: 0 6px 6px 0;
+      color: #334155;
+      font-size: 0.95rem;
+    }
+
+    /* Item Blocks */
+    .item {
+      margin-bottom: 1.5rem;
+    }
+
+    .item-header {
+      display: flex;
+      justify-content: space-between;
+      align-items: baseline;
+      flex-wrap: wrap;
+      gap: 0.5rem;
+      margin-bottom: 0.25rem;
+    }
+
+    .item-title {
+      font-size: 1.1rem;
+      font-weight: 700;
+      color: #1e293b;
+    }
+
+    .item-subtitle {
+      font-size: 0.95rem;
+      color: #008080;
+      font-weight: 600;
+    }
+
+    .item-date {
+      font-size: 0.85rem;
+      color: #64748b;
+      font-weight: 600;
+    }
+
+    .item-desc {
+      color: #475569;
+      font-size: 0.92rem;
+      margin-top: 0.4rem;
+    }
+
+    ul.bullet-list {
+      list-style-type: disc;
+      margin-left: 1.4rem;
+      margin-top: 0.5rem;
+      color: #475569;
+    }
+
+    ul.bullet-list li {
+      margin-bottom: 0.35rem;
+    }
+
+    /* Skills Grid with Progress Bars */
+    .skills-container {
+      display: grid;
+      grid-template-columns: repeat(auto-fill, minmax(240px, 1fr));
+      gap: 1.25rem;
+    }
+
+    .skill-card {
+      background: #f8fafc;
+      border: 1px solid #e2e8f0;
+      padding: 0.85rem 1rem;
+      border-radius: 6px;
+    }
+
+    .skill-info {
+      display: flex;
+      justify-content: space-between;
+      margin-bottom: 0.4rem;
+      font-weight: 600;
+      font-size: 0.9rem;
+      color: #1e293b;
+    }
+
+    .skill-level-text {
+      color: #008080;
+      font-size: 0.8rem;
+    }
+
+    .skill-bar {
+      width: 100%;
+      height: 6px;
+      background: #e2e8f0;
+      border-radius: 3px;
+      overflow: hidden;
+    }
+
+    .skill-progress {
+      height: 100%;
+      background: #008080;
+      border-radius: 3px;
+    }
+
+    /* Badges */
+    .badges-row {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 0.4rem;
+      margin-top: 0.6rem;
+    }
+
+    .badges-row img {
+      height: 22px;
+    }
+
+    /* Print media */
+    @media print {
+      body {
+        background: #ffffff;
+        font-size: 12px;
+      }
+      #resume {
+        box-shadow: none;
+        border: none;
+        padding: 0;
+        margin: 0;
+      }
+      .btn-download {
+        display: none;
+      }
+    }
+
+    @media (max-width: 600px) {
+      #resume {
+        padding: 1.5rem;
+        margin: 1rem auto;
+      }
+      #header {
+        flex-direction: column-reverse;
+        align-items: flex-start;
+      }
+      .header-actions {
+        align-items: flex-start;
+      }
+    }
+  </style>
+</head>
+<body>
+
+  <div id="resume">
+    <!-- Header -->
+    <header id="header">
+      <div class="header-info">
+        <h1 class="name">Bradley Joe Joseph</h1>
+        <h2 class="label">Software Engineer · Backend Systems & AI Focus</h2>
+        <div class="contact-details">
+          <span class="contact-item"><i class="fa-solid fa-location-dot"></i> York & Manchester, UK</span>
+          <span class="contact-item"><i class="fa-solid fa-envelope"></i> <a href="mailto:bradleyjoejoseph@gmail.com">bradleyjoejoseph@gmail.com</a></span>
+          <span class="contact-item"><i class="fa-brands fa-linkedin"></i> <a href="https://linkedin.com/in/bradleyjoejoseph" target="_blank">LinkedIn</a></span>
+          <span class="contact-item"><i class="fa-brands fa-github"></i> <a href="https://github.com/bradleyjoejoseph" target="_blank">GitHub</a></span>
+        </div>
+      </div>
+      <div class="header-actions">
+        <img src="./profile.jpg" alt="Bradley Joe Joseph" class="header-picture">
+        <a href="./Bradley_Joe_Resume.pdf" target="_blank" class="btn-download">
+          <i class="fa-solid fa-file-pdf"></i> Download PDF
+        </a>
+      </div>
+    </header>
+
+    <!-- Professional Summary -->
+    <section class="section">
+      <h2 class="section-title"><i class="fa-solid fa-user"></i> Professional Summary</h2>
+      <div class="summary-box">
+        Second-year MEng Computer Science with AI candidate at the University of York with extensive hands-on experience designing scalable backend architectures, full-stack web applications, game engines, and low-level algorithms. Shipped games with 5,500+ production visits and holds certifications from Harvard University (CS50x), Microsoft, freeCodeCamp, and Kaggle. Currently seeking a 12-month Software Engineering Industrial Placement for 2027/2028.
+      </div>
+    </section>
+
+    <!-- Education -->
+    <section class="section">
+      <h2 class="section-title"><i class="fa-solid fa-graduation-cap"></i> Education</h2>
+      <div class="item">
+        <div class="item-header">
+          <div>
+            <span class="item-title">University of York</span> — <span class="item-subtitle">MEng (Hons) Computer Science with AI (Year in Industry)</span>
+          </div>
+          <span class="item-date">2025 – 2030</span>
+        </div>
+        <p class="item-desc">
+          Rigorous integrated masters covering systems design, artificial intelligence, low-level architecture, software engineering, and machine learning.
+        </p>
+        <ul class="bullet-list">
+          <li><strong>Relevant Modules:</strong> Object-Oriented Programming (Java), Systems Architecture, Low-Level Software (C & Assembly), Mathematics for Computer Science, Algorithms & Data Structures.</li>
+          <li><strong>Athletics & Leadership:</strong> University American Football Team, University Bodybuilding & Strength Club.</li>
+        </ul>
+      </div>
+    </section>
+
+    <!-- Technical Skills -->
+    <section class="section">
+      <h2 class="section-title"><i class="fa-solid fa-code"></i> Technical Arsenal & Proficiency</h2>
+      <div class="skills-container">
+        <div class="skill-card">
+          <div class="skill-info">
+            <span>Python</span>
+            <span class="skill-level-text">Advanced / Primary</span>
+          </div>
+          <div class="skill-bar"><div class="skill-progress" style="width: 90%;"></div></div>
+        </div>
+
+        <div class="skill-card">
+          <div class="skill-info">
+            <span>JavaScript</span>
+            <span class="skill-level-text">Proficient</span>
+          </div>
+          <div class="skill-bar"><div class="skill-progress" style="width: 85%;"></div></div>
+        </div>
+
+        <div class="skill-card">
+          <div class="skill-info">
+            <span>C# & .NET</span>
+            <span class="skill-level-text">High / Applied</span>
+          </div>
+          <div class="skill-bar"><div class="skill-progress" style="width: 75%;"></div></div>
+        </div>
+
+        <div class="skill-card">
+          <div class="skill-info">
+            <span>SQL & SQLite</span>
+            <span class="skill-level-text">Security-Conscious</span>
+          </div>
+          <div class="skill-bar"><div class="skill-progress" style="width: 80%;"></div></div>
+        </div>
+
+        <div class="skill-card">
+          <div class="skill-info">
+            <span>Lua & Roblox Studio</span>
+            <span class="skill-level-text">Production (5.5k+ Visits)</span>
+          </div>
+          <div class="skill-bar"><div class="skill-progress" style="width: 85%;"></div></div>
+        </div>
+
+        <div class="skill-card">
+          <div class="skill-info">
+            <span>C</span>
+            <span class="skill-level-text">Academic (CS50x)</span>
+          </div>
+          <div class="skill-bar"><div class="skill-progress" style="width: 70%;"></div></div>
+        </div>
+
+        <div class="skill-card">
+          <div class="skill-info">
+            <span>Java</span>
+            <span class="skill-level-text">Academic (OOP)</span>
+          </div>
+          <div class="skill-bar"><div class="skill-progress" style="width: 75%;"></div></div>
+        </div>
+
+        <div class="skill-card">
+          <div class="skill-info">
+            <span>HTML5 & CSS3</span>
+            <span class="skill-level-text">Native / Lifelong</span>
+          </div>
+          <div class="skill-bar"><div class="skill-progress" style="width: 95%;"></div></div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Key Projects -->
+    <section class="section">
+      <h2 class="section-title"><i class="fa-solid fa-laptop-code"></i> Highlighted Projects</h2>
+
+      <div class="item">
+        <div class="item-header">
+          <div>
+            <span class="item-title">Infinity Arcade (CS50 Casino)</span> — <span class="item-subtitle">Full-Stack Web Application</span>
+          </div>
+          <span class="item-date">Python · Flask · SQLite · HTML5 · CSS3 · JS</span>
+        </div>
+        <p class="item-desc">
+          Architected a full-featured online casino web application incorporating interactive Blackjack, Slot Machines, and Video Poker. Designed secure user authentication workflows, Werkzeug password hashing, session state synchronization, and parameterized SQL queries to safeguard against CSRF and SQL injection.
+        </p>
+        <div class="badges-row">
+          <img src="https://img.shields.io/badge/Python-3776AB?style=flat-square&logo=python&logoColor=white" alt="Python">
+          <img src="https://img.shields.io/badge/Flask-000000?style=flat-square&logo=flask&logoColor=white" alt="Flask">
+          <img src="https://img.shields.io/badge/SQLite-003B57?style=flat-square&logo=sqlite&logoColor=white" alt="SQLite">
+          <img src="https://img.shields.io/badge/HTML5-E34F26?style=flat-square&logo=html5&logoColor=white" alt="HTML5">
+          <img src="https://img.shields.io/badge/CSS3-1572B6?style=flat-square&logo=css3&logoColor=white" alt="CSS3">
+        </div>
+      </div>
+
+      <div class="item">
+        <div class="item-header">
+          <div>
+            <span class="item-title">The Enigma</span> — <span class="item-subtitle">Production Multiplayer Game</span>
+          </div>
+          <span class="item-date">Lua · Roblox Studio · Networking</span>
+        </div>
+        <p class="item-desc">
+          Engineered and launched an online multiplayer puzzle/obstacle adventure game on Roblox. Authored over 90% of the Lua game logic from scratch, implemented client-server networking optimizations for low-latency replication, and scaled the game to over 5,500 total visits and 1,000+ Monthly Active Users. Awarded the Bombastic Crown of O's.
+        </p>
+        <div class="badges-row">
+          <img src="https://img.shields.io/badge/Lua-2C2D72?style=flat-square&logo=lua&logoColor=white" alt="Lua">
+          <img src="https://img.shields.io/badge/Roblox_Studio-000000?style=flat-square&logo=roblox&logoColor=white" alt="Roblox Studio">
+        </div>
+      </div>
+
+      <div class="item">
+        <div class="item-header">
+          <div>
+            <span class="item-title">Enigma: RTC</span> — <span class="item-subtitle">Real-Time Combat Game</span>
+          </div>
+          <span class="item-date">Godot Engine · C#</span>
+        </div>
+        <p class="item-desc">
+          Built state synchronization logic, character physics controllers, and structured event-driven gameplay loops in Godot for competitive fast-paced combat.
+        </p>
+      </div>
+
+      <div class="item">
+        <div class="item-header">
+          <div>
+            <span class="item-title">Infinity Slope 1</span> — <span class="item-subtitle">3D Runner Game & Physics</span>
+          </div>
+          <span class="item-date">Unity · C# · Blender</span>
+        </div>
+        <p class="item-desc">
+          Procedurally generated slope terrain runner game published on Google Play and Sketchfab, utilizing physics-based acceleration modifiers and procedural generation.
+        </p>
+      </div>
+    </section>
+
+    <!-- Certifications -->
+    <section class="section">
+      <h2 class="section-title"><i class="fa-solid fa-certificate"></i> Verified Certifications</h2>
+      <ul class="bullet-list">
+        <li><strong>CS50x: Introduction to Computer Science</strong> — Harvard University (C, Python, SQL, Flask, Data Structures)</li>
+        <li><strong>Foundational C# with Microsoft</strong> — Microsoft & freeCodeCamp</li>
+        <li><strong>JavaScript Algorithms and Data Structures</strong> — freeCodeCamp</li>
+        <li><strong>Front End Development Libraries</strong> — freeCodeCamp (React, Redux, Bootstrap, jQuery, Sass)</li>
+        <li><strong>Responsive Web Design</strong> — freeCodeCamp</li>
+        <li><strong>Data Visualization</strong> — freeCodeCamp (D3.js)</li>
+        <li><strong>Python Certification</strong> — Kaggle</li>
+      </ul>
+    </section>
+
+    <!-- Interests -->
+    <section class="section">
+      <h2 class="section-title"><i class="fa-solid fa-heart"></i> Interests & Discipline</h2>
+      <p class="item-desc">
+        University American Football Player · Bodybuilding & Strength Athletics · Former County Badminton Player · Competitive Pokémon Showdown (OU Tier PvP) · Speedcubing (3x3 Rubik's Cube) · Automotive & Industrial Design.
+      </p>
+    </section>
+  </div>
+
+</body>
+</html>
