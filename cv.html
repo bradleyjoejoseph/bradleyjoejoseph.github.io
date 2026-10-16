@@ -15,22 +15,23 @@
     }
 
     body, html {
-      font-family: "Open Sans", -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
+      font-family: -apple-system, BlinkMacSystemFont, "SF Pro Display", "SF Pro Text", "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
       font-size: 14px;
-      color: #374151;
-      background-color: #f8fafc;
+      color: #f0f6fc;
+      background-color: #0d1117;
       line-height: 1.6;
       -webkit-text-size-adjust: 100%;
+      -webkit-font-smoothing: antialiased;
     }
 
     a {
-      color: #008080;
+      color: #58a6ff;
       text-decoration: none;
       transition: color 0.2s ease;
     }
 
     a:hover {
-      color: #005959;
+      color: #79c0ff;
       text-decoration: underline;
     }
 
@@ -38,16 +39,16 @@
     #resume {
       max-width: 860px;
       margin: 2rem auto;
-      background: #ffffff;
+      background: #161b22;
       padding: 3rem;
-      border-radius: 8px;
-      box-shadow: 0 4px 20px rgba(0, 0, 0, 0.06);
-      border: 1px solid #e2e8f0;
+      border-radius: 14px;
+      box-shadow: 0 8px 32px rgba(0, 0, 0, 0.45);
+      border: 1px solid #30363d;
     }
 
     /* Header */
     #header {
-      border-bottom: 2px solid #e2e8f0;
+      border-bottom: 1px solid #30363d;
       padding-bottom: 2rem;
       margin-bottom: 2rem;
       display: flex;
@@ -65,16 +66,18 @@
     #header h1.name {
       font-size: 2.4rem;
       font-weight: 700;
-      color: #0f172a;
+      color: #f0f6fc;
       line-height: 1.1;
       margin-bottom: 0.5rem;
+      letter-spacing: -0.025em;
     }
 
     #header h2.label {
       font-size: 1.15rem;
-      color: #008080;
+      color: #58a6ff;
       font-weight: 600;
       margin-bottom: 1rem;
+      letter-spacing: -0.01em;
     }
 
     .contact-details {
@@ -82,7 +85,7 @@
       flex-wrap: wrap;
       gap: 1.25rem;
       font-size: 0.9rem;
-      color: #64748b;
+      color: #8b949e;
     }
 
     .contact-item {
@@ -92,7 +95,7 @@
     }
 
     .contact-item i {
-      color: #008080;
+      color: #58a6ff;
     }
 
     .header-actions {
@@ -107,28 +110,30 @@
       height: 90px;
       border-radius: 50%;
       object-fit: cover;
-      border: 3px solid #008080;
-      box-shadow: 0 4px 10px rgba(0, 128, 128, 0.2);
+      border: 2px solid #58a6ff;
+      box-shadow: 0 4px 14px rgba(0, 0, 0, 0.35);
     }
 
     .btn-download {
       display: inline-flex;
       align-items: center;
       gap: 0.5rem;
-      background: #008080;
+      background: #238636;
       color: #ffffff;
       padding: 0.5rem 1rem;
       border-radius: 6px;
       font-size: 0.85rem;
       font-weight: 600;
-      transition: background 0.2s ease, transform 0.1s ease;
+      border: 1px solid rgba(240, 246, 252, 0.1);
+      transition: all 0.2s cubic-bezier(0.16, 1, 0.3, 1);
     }
 
     .btn-download:hover {
-      background: #006666;
+      background: #2ea043;
       color: #ffffff;
       text-decoration: none;
       transform: translateY(-1px);
+      box-shadow: 0 3px 8px rgba(35, 134, 54, 0.3);
     }
 
     /* Section Styling */
@@ -140,9 +145,9 @@
       font-size: 1.05rem;
       text-transform: uppercase;
       letter-spacing: 0.08em;
-      color: #008080;
+      color: #f0f6fc;
       font-weight: 700;
-      border-bottom: 1px solid #cbd5e1;
+      border-bottom: 1px solid #30363d;
       padding-bottom: 0.4rem;
       margin-bottom: 1.25rem;
       display: flex;
@@ -150,12 +155,16 @@
       gap: 0.5rem;
     }
 
+    h2.section-title i {
+      color: #58a6ff;
+    }
+
     .summary-box {
-      background: #f0fdfa;
-      border-left: 4px solid #008080;
+      background: #21262d;
+      border-left: 4px solid #58a6ff;
       padding: 1rem 1.25rem;
-      border-radius: 0 6px 6px 0;
-      color: #334155;
+      border-radius: 0 8px 8px 0;
+      color: #c9d1d9;
       font-size: 0.95rem;
     }
 
@@ -175,37 +184,44 @@
 
     .item-title {
       font-size: 1.1rem;
-      font-weight: 700;
-      color: #1e293b;
+      font-weight: 600;
+      color: #f0f6fc;
+      letter-spacing: -0.015em;
     }
 
     .item-subtitle {
       font-size: 0.95rem;
-      color: #008080;
-      font-weight: 600;
+      color: #58a6ff;
+      font-weight: 500;
     }
 
     .item-date {
       font-size: 0.85rem;
-      color: #64748b;
-      font-weight: 600;
+      color: #8b949e;
+      font-weight: 500;
     }
 
     .item-desc {
-      color: #475569;
+      color: #8b949e;
       font-size: 0.92rem;
       margin-top: 0.4rem;
+      line-height: 1.55;
     }
 
     ul.bullet-list {
       list-style-type: disc;
       margin-left: 1.4rem;
       margin-top: 0.5rem;
-      color: #475569;
+      color: #8b949e;
     }
 
     ul.bullet-list li {
       margin-bottom: 0.35rem;
+      line-height: 1.5;
+    }
+
+    ul.bullet-list strong {
+      color: #f0f6fc;
     }
 
     /* Skills Grid with Progress Bars & Category Badges */
@@ -216,35 +232,35 @@
     }
 
     .skill-card {
-      background: #f8fafc;
-      border: 1px solid #e2e8f0;
+      background: #21262d;
+      border: 1px solid #30363d;
       padding: 1.1rem 1.25rem;
-      border-radius: 8px;
+      border-radius: 10px;
       display: flex;
       flex-direction: column;
-      transition: all 0.2s ease;
+      transition: all 0.2s cubic-bezier(0.16, 1, 0.3, 1);
     }
 
     .skill-card:hover {
-      background: #ffffff;
-      border-color: #cbd5e1;
-      box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.05);
+      background: #282e37;
+      border-color: rgba(88, 166, 255, 0.4);
+      transform: translateY(-2px);
     }
 
     .skill-info {
       display: flex;
       justify-content: space-between;
       align-items: baseline;
-      margin-bottom: 0.35rem;
-      font-weight: 700;
+      margin-bottom: 0.45rem;
+      font-weight: 600;
       font-size: 0.95rem;
-      color: #0f172a;
+      color: #f0f6fc;
     }
 
     .skill-level-text {
-      color: #008080;
-      font-size: 0.8rem;
-      font-weight: 700;
+      color: #58a6ff;
+      font-size: 0.78rem;
+      font-weight: 600;
       text-transform: uppercase;
       letter-spacing: 0.04em;
     }
@@ -252,7 +268,7 @@
     .skill-bar {
       width: 100%;
       height: 6px;
-      background: #e2e8f0;
+      background: #30363d;
       border-radius: 3px;
       overflow: hidden;
       margin-bottom: 0.75rem;
@@ -260,7 +276,7 @@
 
     .skill-progress {
       height: 100%;
-      background: #008080;
+      background: #58a6ff;
       border-radius: 3px;
     }
 
@@ -274,22 +290,52 @@
 
     .badges-row img {
       height: 22px;
+      border-radius: 3px;
     }
 
     /* Print media */
     @media print {
-      body {
-        background: #ffffff;
-        font-size: 12px;
+      body, html {
+        background: #ffffff !important;
+        color: #111827 !important;
       }
       #resume {
-        box-shadow: none;
-        border: none;
-        padding: 0;
-        margin: 0;
+        background: #ffffff !important;
+        color: #111827 !important;
+        border: none !important;
+        box-shadow: none !important;
+        padding: 0 !important;
+        margin: 0 !important;
+      }
+      #header {
+        border-bottom-color: #e5e7eb !important;
+      }
+      #header h1.name, .item-title, .skill-info {
+        color: #111827 !important;
+      }
+      #header h2.label, .item-subtitle, .skill-level-text, h2.section-title {
+        color: #0969da !important;
+      }
+      .contact-details, .item-date, .item-desc, ul.bullet-list {
+        color: #4b5563 !important;
+      }
+      .summary-box {
+        background: #f3f4f6 !important;
+        color: #1f2937 !important;
+        border-left-color: #0969da !important;
+      }
+      .skill-card {
+        background: #f9fafb !important;
+        border-color: #e5e7eb !important;
+      }
+      .skill-bar {
+        background: #e5e7eb !important;
+      }
+      .skill-progress {
+        background: #0969da !important;
       }
       .btn-download {
-        display: none;
+        display: none !important;
       }
     }
 
@@ -319,8 +365,8 @@
         <div class="contact-details">
           <span class="contact-item"><i class="fa-solid fa-location-dot"></i> York & Manchester, UK</span>
           <span class="contact-item"><i class="fa-solid fa-envelope"></i> <a href="mailto:bradleyjoejoseph@gmail.com">bradleyjoejoseph@gmail.com</a></span>
-          <span class="contact-item"><i class="fa-brands fa-linkedin"></i> <a href="https://linkedin.com/in/bradleyjoejoseph" target="_blank">LinkedIn</a></span>
-          <span class="contact-item"><i class="fa-brands fa-github"></i> <a href="https://github.com/bradleyjoejoseph" target="_blank">GitHub</a></span>
+          <span class="contact-item"><i class="fa-brands fa-linkedin"></i> <a href="https://linkedin.com/in/bradleyjoejoseph" target="_blank">@bradleyjoejoseph</a></span>
+          <span class="contact-item"><i class="fa-brands fa-github"></i> <a href="https://github.com/bradleyjoejoseph" target="_blank">@bradleyjoejoseph</a></span>
         </div>
       </div>
       <div class="header-actions">
