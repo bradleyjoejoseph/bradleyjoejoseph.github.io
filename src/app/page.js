@@ -387,6 +387,31 @@ export default function Home() {
             <div className={styles.secondaryCard}>
               <div className={styles.secondaryCardImage}>
                 <Image
+                  src="/aws_cloud_essentials.png"
+                  alt="AWS Cloud Computing Essentials"
+                  fill
+                  className={styles.bentoImage}
+                />
+              </div>
+              <div className={styles.secondaryCardContent}>
+                <h3 className={styles.secondaryCardTitle}>AWS Cloud Essentials</h3>
+                <p className={styles.secondaryCardDesc}>
+                  Amazon Web Services — SimuLearn: Cloud Computing Essentials.
+                </p>
+                <a
+                  href="/AWS_Cloud_Computing_Essentials.pdf"
+                  className={styles.cardLink}
+                  target="_blank"
+                  rel="noopener noreferrer"
+                >
+                  View Certification →
+                </a>
+              </div>
+            </div>
+
+            <div className={styles.secondaryCard}>
+              <div className={styles.secondaryCardImage}>
+                <Image
                   src="/JADS.png"
                   alt="JavaScript Algorithms"
                   fill
