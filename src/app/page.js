@@ -154,7 +154,6 @@ export default function Home() {
                   <span className={styles.tag}>React</span>
                   <span className={styles.tag}>FastAPI</span>
                   <span className={styles.tag}>Docker</span>
-                  <span className={styles.tag}>PostgreSQL</span>
                 </div>
               </div>
 
